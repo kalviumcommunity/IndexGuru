@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(to top left, #020000e8, #0c0404);
+}
+.graph {
+  /* background-color: red; */
+  height: 80vh;
+  padding-top: 20px;
+}
+.investment {
+  background-color: gray;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.invest-return {
+  background-color: purple;
+  height: 30vh;
+  width: 100%;
+}
+.heading {
+  text-align: center;
+  font-size: 3em;
+  color: #ffb711;
+}
+.information {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Lora", serif;
+  color: #ffb711;
+}
+.stats {
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 65vh;
+}
+.stats-heading {
+  font-size: 75px;
+  font-family: "Lora", serif;
+  color: #ffb711;
+}
+.priciple {
+  font-size: 55px;
+  font-family: "Lora", serif;
+  color: #ffb711;
+}
+.over {
+  font-size: 30px;
+  color: #ffb711;
+}
+.buttons2 {
+  background-color: transparent;
+  height: 5vh;
+  border: 1px solid orange;
+  padding: 8px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+#button1 {
+  border-left: 3px solid orange;
+  width: 8vh;
+  color: #ffb711;
+}
+#button2 {
+  border-left: 3px solid orange;
+  width: 16vh;
+  color: #ffb711;
+}
+#button3 {
+  border-left: 3px solid orange;
+  width: 8vh;
+  color: #ffb711;
+}
+.buttons2:hover {
+  background-color: #ffb711;
+  transition: 0.4s;
+  color: #0d0a0a;
+  letter-spacing: 2px;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+}
+.buttons2:active {
+  transform: translateY(8px);
+}
