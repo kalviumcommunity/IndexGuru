@@ -15,7 +15,7 @@
 }
 .Navbar {
   height: 20vh;
-  background-color: #0d0a0a;
+  background-color: #0d0a0c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,7 +61,6 @@
   border: none;
   border-radius: 40px;
   font-weight: 900;
-  text-decoration: bo;
 }
 
 /* #active {
@@ -118,7 +117,6 @@
   justify-content: flex-start;
   width: 100%;
   font-size: 120px;
-  margin-left: 15%;
   padding: 15px;
   color: #04fefc;
   margin-top: 20px;

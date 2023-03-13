@@ -1,28 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Navbar.css";
 import Logo from "./assets/Logo.png";
 import searchButton from "./assets/search-button.png";
-export default function Navbar() {
-  // const handleClick = (e) => {
-  //   let button = document.getElementsByClassName("buttons");
-  //   for (let i = 0; i < button.length; i++) {
-  //     if (button[i].hasAttribute("id", "active")) {
-  //       button[i].removeAttribute("id", "active");
-  //     }
-  //   }
-  //   e.target.setAttribute("id", "active");
-  // };
-  const [imgNo, setImgNo] = useState(0);
 
-  useEffect(() => {
-    setInterval(() => {
-      if (imgNo === 10) {
-        setImgNo(0);
-      } else if (imgNo >= 0 && imgNo < 10) {
-        setImgNo(imgNo + 1);
-      }
-    }, 3000);
-  });
+export default function Navbar() {
 
   return (
     <header className="header">
