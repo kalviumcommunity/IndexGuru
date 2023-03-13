@@ -31,9 +31,7 @@ export default function FundBox() {
       {/* The investments div start here  */}
       <div className="stats">
         <div className="stats-heading">Had you invested</div>
-        <div className="priciple" contentEditable={true}>
-          100000
-        </div>
+        <div className="priciple">100000</div>
         <div className="over"> Over the last year</div>
         <div className="rainbow-box ">
           <button className="buttons2" id="button1">
