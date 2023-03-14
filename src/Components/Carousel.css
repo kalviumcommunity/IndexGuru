@@ -5,10 +5,11 @@
 }
 .carousel {
   display: flex;
-  height: 400px;
-  width: 60%;
+  height: 410px;
+  width: 38%;
   /* max-width: 800px; */
 }
+
 .carousel_wrapper {
   position: relative;
   width: 100%;
@@ -42,7 +43,7 @@
   transform: scale(1);
   pointer-events: visible;
 }
-.carousel_arrow_left,
+/* .carousel_arrow_left,
 .carousel_arrow_right {
   position: absolute;
   font-size: 50px;
@@ -63,4 +64,4 @@
 }
 .carousel_arrow_right {
   right: 15px;
-}
+} */

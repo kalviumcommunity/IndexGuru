@@ -34,15 +34,15 @@ export default function FundBox() {
         <div className="priciple">100000</div>
         <div className="over"> Over the last year</div>
         <div className="rainbow-box ">
-          <button className="buttons2" id="button1">
+          <div className="buttons2" id="button1">
             1Y
-          </button>
-          <button className="buttons2" id="button2">
+          </div>
+          <div className="buttons2" id="button2">
             3Y
-          </button>
-          <button className="buttons2" id="button3">
+          </div>
+          <div className="buttons2" id="button3">
             ALL
-          </button>
+          </div>
         </div>
       </div>
     </>
