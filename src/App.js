@@ -1,12 +1,13 @@
 import Navbar from "./Components/Navbar";
 import FundBox from "./Components/FundBox";
-import Carousel from "./Components/Carousel";
+import Footer from "./Components/Footer";
+
 function App() {
   return (
     <div className="App">
       <Navbar />
       <FundBox />
-      <Carousel />
+      <Footer />
     </div>
   );
 }

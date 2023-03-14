@@ -2,9 +2,9 @@ import React from "react";
 import "./Navbar.css";
 import Logo from "./assets/Logo.png";
 import searchButton from "./assets/search-button.png";
+import Carousel from "./Carousel";
 
 export default function Navbar() {
-
   return (
     <header className="header">
       <div className="Navbar">
@@ -35,6 +35,7 @@ export default function Navbar() {
           Funky <br />
           Funding
         </span>
+        <Carousel />
       </div>
     </header>
   );

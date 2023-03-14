@@ -32,7 +32,6 @@ body {
   color: #ffb711;
 }
 .information {
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -43,7 +42,6 @@ body {
   color: #ffb711;
 }
 .stats {
-  /* background-color: grey; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,40 +62,54 @@ body {
   font-size: 30px;
   color: #ffb711;
 }
-.buttons2 {
-  background-color: transparent;
+
+#button1,
+#button3 {
+  width: 5vw;
+  color: aliceblue;
+  border: none;
   height: 5vh;
-  border: 1px solid orange;
-  padding: 8px;
-  font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  color: black;
-}
-#button1 {
-  border-left: 3px solid orange;
-  width: 8vh;
-  color: #ffb711;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 #button2 {
-  border-left: 3px solid orange;
-  width: 16vh;
-  color: #ffb711;
-}
-#button3 {
-  border-left: 3px solid orange;
-  width: 8vh;
-  color: #ffb711;
+  width: 5vw;
+  color: aliceblue;
+  border: none;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .buttons2:hover {
-  background-color: #ffb711;
   transition: 0.4s;
-  color: #0d0a0a;
   letter-spacing: 2px;
-  border: none;
-  font-weight: 900;
   cursor: pointer;
+  background-image: linear-gradient(to bottom right, #000428 30%, #004e92);
 }
 .buttons2:active {
-  transform: translateY(8px);
+  transform: translateY(3px);
+}
+.rainbow-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6vh;
+  width: 18vw;
+  padding: 16px;
+  border-radius: 20px 20px 20px 20px;
+  border: 0px solid #f60000;
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Lora", serif;
+  text-align: center;
+
+  box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  -webkit-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  -moz-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+
+  text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82);
 }
