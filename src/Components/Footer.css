@@ -23,7 +23,7 @@
 .footer__links {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .footer__links a {
@@ -36,7 +36,6 @@
 .footer__links a:hover {
   text-decoration: underline;
 }
-
 .footer__copyright {
   font-size: 1rem;
 }
