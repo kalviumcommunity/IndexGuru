@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import Logo from "./assets/Logo.png";
 import searchButton from "./assets/search-button.png";
 import Carousel from "./Carousel";
 
 export default function Navbar() {
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    console.log(search);
+  };
+  document.addEventListener("keypress", (e) => {
+    if (e.target === "enter") {
+      document.getElementById("search-button").click();
+    }
+    console.log(search);
+  });
+  const [search, setSearch] = useState("");
   return (
     <header className="header">
       <div className="Navbar">
@@ -12,14 +23,17 @@ export default function Navbar() {
         <div className="searchBarHolder">
           <input
             type="text"
+            value={search}
             className="search-bar"
-            placeholder="Search Your Funds Here "
+            placeholder="Search Your Funds Here"
+            onChange={handleChange}
           />
           <span>
             <img
               src={searchButton}
               className="search-icon"
               height={20}
+              id="search-button"
               alt="button"
             />
           </span>

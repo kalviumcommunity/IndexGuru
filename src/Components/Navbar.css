@@ -15,6 +15,7 @@
 }
 .Navbar {
   height: 20vh;
+  padding: 50px;
   background-color: #0d0a0c;
   display: flex;
   justify-content: space-between;
@@ -23,7 +24,7 @@
 .search-bar {
   height: 5vh;
   width: 100%;
-  margin-left: 65px;
+  margin-left: 55px;
   border-radius: 20px;
   border: none;
   background: linear-gradient(#f60000, #ffb711);

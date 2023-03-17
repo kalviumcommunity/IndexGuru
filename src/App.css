@@ -11,6 +11,9 @@ body {
   height: 80vh;
   padding-top: 20px;
 }
+.heading0 {
+  margin-top: 30px;
+}
 .investment {
   background-color: gray;
   width: 100%;
@@ -73,6 +76,7 @@ body {
   justify-content: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 20px 20px 20px 20px;
 }
 #button2 {
   width: 5vw;
@@ -83,6 +87,7 @@ body {
   justify-content: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 20px 20px 20px 20px;
 }
 .buttons2:hover {
   transition: 0.4s;
@@ -112,4 +117,28 @@ body {
   -moz-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
 
   text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82);
+}
+.heading1 {
+  font-size: 50px;
+  text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82);
+}
+.returns {
+  color: white;
+  height: 50vh;
+  width: 50%;
+  margin-top: 80px;
+  padding: 20px 20px;
+  font-family: "Lora", serif;
+  margin-left: 450px;
+  box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  -webkit-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  -moz-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+}
+.return-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  font-size: 25px;
+  height: 100%;
 }
