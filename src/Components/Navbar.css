@@ -15,29 +15,39 @@
 }
 .Navbar {
   height: 20vh;
+  padding: 50px;
   background-color: #0d0a0c;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .search-bar {
-  height: 5vh;
+  height: 6vh;
   width: 100%;
-  margin-left: 65px;
-  border-radius: 20px;
+  margin-left: 15px;
+  border-radius: 10px;
   border: none;
-  background: linear-gradient(#f60000, #ffb711);
-  color: white;
+  color: red;
   text-align: center;
   font-size: 20px;
+  /* background-image: linear-gradient(to bottom right, #fccf31, #f55555); */
+  /* background-image: linear-gradient(
+    to right top,
+    #205cb6,
+    #1e6a96,
+    #008793,
+    #04fefc
+  ); */
 }
 .search-bar:hover {
-  box-shadow: 10px 10px 80px 1px #f60000;
+  box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  -webkit-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  -moz-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
 }
 .links {
   width: 70vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .buttons {
@@ -45,8 +55,8 @@
   width: 15vh;
   text-decoration: none;
   letter-spacing: 4px;
-  font-size: 18px;
-  color: #ffb711;
+  font-size: 20px;
+  color: white;
   text-align: center;
   background-color: #0d0a0a;
   border: none;
@@ -55,31 +65,17 @@
   cursor: pointer;
 }
 .buttons:hover {
-  background-color: #ffb711;
   transition: 0.4s;
-  color: #0d0a0a;
+  color: #fcfcff;
+  background-image: linear-gradient(to bottom right, #04fefc 30%, #004e92);
   letter-spacing: 2px;
   border: none;
   border-radius: 40px;
   font-weight: 900;
 }
 
-/* #active {
-  height: 6vh;
-  width: 15vh;
-  text-decoration: none;
-  letter-spacing: 4px;
-  font-size: 18px;
-  color: black;
-  text-align: center;
-  background-color: #04fefc;
-  border: none;
-  padding: 5px;
-  border-radius: 40px;
-  font-family: "Lora", serif;
-} */
 ::placeholder {
-  color: white;
+  color: red;
   text-align: center;
   font-size: 15px;
   letter-spacing: 1px;
@@ -87,8 +83,7 @@
   font-weight: 600;
 }
 .searchBarHolder {
-  border-radius: 40pc;
-  margin-left: 5%;
+  margin-left: 2%;
   width: 50%;
   display: flex;
   align-items: center;
@@ -104,7 +99,6 @@
   transform: translateY(2px);
 }
 .search-icon:hover {
-  box-shadow: 10px 10px 80px 1px #f60000;
   cursor: pointer;
 }
 

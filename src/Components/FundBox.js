@@ -4,8 +4,8 @@ import "../App.css";
 export default function FundBox() {
   return (
     <>
-      <div>
-        <h1 className="heading">SBI Nifty Index Grwoth Direct Plan</h1>
+      <div className="heading0">
+        <h1 className="heading">SBI Nifty Index Growth Direct Plan</h1>
       </div>
       <div className="graph">
         <div className="information">
@@ -23,15 +23,17 @@ export default function FundBox() {
             <span id="ter-data"> 0.18%</span>
           </div>
           <div className="RATING">
-            <span id="rating">Rating</span> <br />
-            <span id="rating-data">************</span>
+            <span id="rating">Category</span> <br />
+            <span id="rating-data">Sectorial</span>
           </div>
         </div>
       </div>
       {/* The investments div start here  */}
       <div className="stats">
         <div className="stats-heading">Had you invested</div>
-        <div className="priciple">100000</div>
+        <div className="priciple" contentEditable={true}>
+          100000
+        </div>
         <div className="over"> Over the last year</div>
         <div className="rainbow-box ">
           <div className="buttons2" id="button1">
@@ -43,6 +45,15 @@ export default function FundBox() {
           <div className="buttons2" id="button3">
             ALL
           </div>
+        </div>
+      </div>
+
+      <div className="returns">
+        <span className="heading1">Your returns would have been </span>
+        <div className="return-box">
+          <div className="three-fields">SBI Nifty 50</div>
+          <div className="three-fields">Fixed Deposite</div>
+          <div className="three-fields">Banking Saving</div>
         </div>
       </div>
     </>
