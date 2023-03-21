@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { FaSearch } from "react-icons/fa";
 import Logo from "./assets/Logo.png";
-import searchButton from "./assets/search-button.png";
 import Carousel from "./Carousel";
+import LoginButton from "./login";
 
 export default function Navbar() {
   const handleChange = (e) => {
@@ -18,6 +19,8 @@ export default function Navbar() {
   const [search, setSearch] = useState("");
   return (
     <header className="header">
+      <LoginButton />
+
       <div className="Navbar">
         <img src={Logo} className="logo" alt="This is my logo" />
         <div className="searchBarHolder">
@@ -28,15 +31,7 @@ export default function Navbar() {
             placeholder="Search Your Funds Here"
             onChange={handleChange}
           />
-          <span>
-            <img
-              src={searchButton}
-              className="search-icon"
-              height={20}
-              id="search-button"
-              alt="button"
-            />
-          </span>
+          <FaSearch className="search-icon" />
         </div>
         <div className="links">
           <button className="buttons">Log In</button>

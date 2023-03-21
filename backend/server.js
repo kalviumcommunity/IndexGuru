@@ -7,7 +7,7 @@ require("./db/connection");
 
 app.use(express.json());
 
-app.get("/apis/v1/funds/", async (req, resp) => {
+app.get("/apis/v1/funds", async (req, resp) => {
   try {
     const data = await Fund.find();
 

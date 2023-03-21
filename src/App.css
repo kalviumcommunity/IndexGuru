@@ -93,7 +93,7 @@ body {
   transition: 0.4s;
   letter-spacing: 2px;
   cursor: pointer;
-  background-image: linear-gradient(to bottom right, #000428 30%, #004e92);
+  background-image: linear-gradient(to bottom right, #04fefc 30%, #004e92);
 }
 .buttons2:active {
   transform: translateY(3px);
