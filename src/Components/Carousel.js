@@ -4,7 +4,6 @@ import { pictures } from "./Data";
 import { useEffect } from "react";
 function Carousel() {
   const [current, setCurrent] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(null);
   useEffect(() => {
     setTimeout(() => {
       slideRight();
@@ -13,10 +12,6 @@ function Carousel() {
 
   const slideRight = () => {
     setCurrent(current === pictures.length - 1 ? 0 : current + 1);
-  };
-
-  const slideLeft = () => {
-    setCurrent(current === 0 ? pictures.length - 1 : current - 1);
   };
   return (
     <div className="carousel">
@@ -40,12 +35,6 @@ function Carousel() {
             </div>
           );
         })}
-        {/* <div className="carousel_arrow_left" onClick={slideLeft}>
-          &lsaquo;
-        </div>
-        <div className="carousel_arrow_right" onClick={slideRight}>
-          &rsaquo;
-        </div> */}
       </div>
     </div>
   );

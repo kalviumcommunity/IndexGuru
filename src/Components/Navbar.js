@@ -4,8 +4,11 @@ import { FaSearch } from "react-icons/fa";
 import Logo from "./assets/Logo.png";
 import Carousel from "./Carousel";
 import LoginButton from "./login";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Navbar() {
+  const { isAuthenticated, user } = useAuth0();
+
   const handleChange = (e) => {
     setSearch(e.target.value);
     console.log(search);
@@ -19,8 +22,6 @@ export default function Navbar() {
   const [search, setSearch] = useState("");
   return (
     <header className="header">
-      <LoginButton />
-
       <div className="Navbar">
         <img src={Logo} className="logo" alt="This is my logo" />
         <div className="searchBarHolder">
@@ -34,9 +35,9 @@ export default function Navbar() {
           <FaSearch className="search-icon" />
         </div>
         <div className="links">
-          <button className="buttons">Log In</button>
-          <button className="buttons">Sign Up</button>
           <button className="buttons">About</button>
+          <button className="buttons">Contact</button>
+          <LoginButton />
         </div>
       </div>
       <div className="funk-container">
