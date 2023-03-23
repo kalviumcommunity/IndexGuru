@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const db = process.env.db;
 
 mongoose
-  .connect("mongodb://localhost:27017/IndexGuru", {
+  .connect(db, {
     useNewUrlParser: true,
     family: 4,
   })
