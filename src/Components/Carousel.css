@@ -43,25 +43,3 @@
   transform: scale(1);
   pointer-events: visible;
 }
-/* .carousel_arrow_left,
-.carousel_arrow_right {
-  position: absolute;
-  font-size: 50px;
-  top: 50%;
-  transform: translate(0, -50%);
-  background-color: gainsboro;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  padding-bottom: 15px;
-  cursor: pointer;
-}
-.carousel_arrow_left {
-  left: 15px;
-}
-.carousel_arrow_right {
-  right: 15px;
-} */

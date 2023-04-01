@@ -2,10 +2,13 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
+const cors = require("cors");
 const Fund = require("./models/fundSchema");
+const { find } = require("./models/fundSchema");
 require("./db/connection");
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/apis/v1/funds", async (req, resp) => {
   try {

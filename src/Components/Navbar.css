@@ -23,7 +23,7 @@
 }
 .search-bar {
   height: 6vh;
-  width: 100%;
+  width: 60%;
   margin-left: 15px;
   border-radius: 10px;
   border: none;
@@ -84,14 +84,46 @@
   padding: 2px;
   font-weight: 600;
 }
-.searchBarHolder {
-  margin-left: 2%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.search-results {
+  position: absolute;
+  right: 40%;
+  top: 14%;
+  height: 35vh;
+  box-shadow: 4px 7px 55px -6px rgba(200, 255, 255, 0.855);
+  -webkit-box-shadow: 4px 7px 55px -6px rgba(200, 255, 255, 0.855);
+  -moz-box-shadow: 4px 7px 55px -6px rgba(200, 255, 255, 0.855);
+  z-index: 1;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.search-results::-webkit-scrollbar {
+  display: none;
 }
 
+.search-results p {
+  border-radius: 5px;
+  width: 35vw;
+  background-color: #ffffff;
+  height: 5vh;
+  border-bottom: 2px solid #000;
+  font-family: "Lora", serif;
+  color: white;
+  background-color: #0d0a0a;
+  padding: 8px;
+}
+.search-results p:hover {
+  background-color: #000000;
+  cursor: pointer;
+  color: #ffb711;
+  transition: 0.1s;
+}
+.search-results p:active {
+  transform: translateY(1px);
+}
 .search-icon {
   position: relative;
   right: 35px;
@@ -173,7 +205,6 @@
   top: 8.8rem;
   right: 10px;
   color: white;
-  text-shadow: -2px 4px 8px rgba(200, 255, 255, 0.855);
 }
 
 .alert-btn-container {
@@ -214,5 +245,61 @@
   .logoutAlert {
     width: 24rem;
     right: 8px;
+  }
+}
+
+/* CSS for screens smaller than 768px (i.e. tablets and mobile devices) */
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 50vh;
+  }
+
+  .logo {
+    height: 20vh;
+    width: 20vh;
+    margin-top: 5px;
+  }
+
+  .Navbar {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-bar {
+    height: 4vh;
+    width: 80%;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .searchBarHolder {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    height: 5vh;
+    width: 40%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .search-results {
+    top: 18%;
+  }
+
+  .funk-container {
+    font-size: 60px;
+    margin-top: 50px;
   }
 }
