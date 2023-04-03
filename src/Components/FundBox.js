@@ -1,36 +1,43 @@
 import React from "react";
 import "../App.css";
 
-export default function FundBox() {
+export default function FundBox(props) {
+  const { fundItem } = props;
   return (
     <>
       <div className="heading0">
-        <h1 className="heading">SBI Nifty Index Growth Direct Plan</h1>
+        <h1 className="heading">{fundItem === null ? "SBI" : fundItem.name}</h1>
       </div>
       <div className="graph">
         <div className="information">
           <div className="NAV">
             <span>NAV</span>
             <br />
-            <span>10000000</span>
+            <span>{fundItem === null ? 500 : fundItem.current_nav}</span>
           </div>
-          <div className="AUM">
-            <span id="aum">AUM</span> <br />
-            <span id="aum-data">1.6cr </span>
+          <div className="RATING">
+            <span id="aum">Rating</span> <br />
+            <span id="aum-data">{fundItem === null ? 4 : fundItem.rating}</span>
           </div>
           <div className="TER">
             <span id="ter">TER</span> <br />
-            <span id="ter-data"> 0.18%</span>
+            <span id="ter-data">
+              {fundItem === null ? "0.18%" : fundItem.ter.toString() + "%"}
+            </span>
           </div>
-          <div className="RATING">
+          <div className="CATEGORY">
             <span id="rating">Category</span> <br />
-            <span id="rating-data">Sectorial</span>
+            <span id="rating-data">
+              {fundItem === null ? "Sectorial" : fundItem.category}
+            </span>
           </div>
         </div>
       </div>
       {/* The investments div start here  */}
       <div className="stats">
-        <div className="stats-heading">Had you invested</div>
+        <div className="stats-heading" onClick={console.log(fundItem)}>
+          Had you invested
+        </div>
         <div className="priciple" contentEditable={true}>
           100000
         </div>

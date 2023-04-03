@@ -30,7 +30,7 @@ function Footer() {
         </a>
       </div>
       <div className="footer__links">
-        <a href="/">Home</a>
+        <a href="/">Terms and Conditions </a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </div>
