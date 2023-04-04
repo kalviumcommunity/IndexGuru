@@ -25,11 +25,10 @@ body {
   padding: 20px;
 }
 .invest-return {
-  background-color: purple;
   height: 30vh;
   width: 100%;
 }
-.heading {
+.fund-name {
   text-align: center;
   font-size: 3em;
   color: #ffb711;

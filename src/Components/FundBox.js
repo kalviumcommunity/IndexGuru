@@ -6,7 +6,9 @@ export default function FundBox(props) {
   return (
     <>
       <div className="heading0">
-        <h1 className="heading">{fundItem === null ? "SBI" : fundItem.name}</h1>
+        <h1 className="fund-name">
+          {fundItem === null ? "SBI" : fundItem.name}
+        </h1>
       </div>
       <div className="graph">
         <div className="information">

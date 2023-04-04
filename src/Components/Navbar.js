@@ -12,7 +12,7 @@ export default function Navbar() {
   const [fund, setFund] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/apis/v1/funds").then((resp) => {
+    axios.get(process.env.REACT_APP_API_URL).then((resp) => {
       setFundsData(resp.data);
     });
   }, []);
@@ -54,8 +54,8 @@ export default function Navbar() {
               })}
           </div>
           <div className="links">
-            <button className="buttons">About</button>
-            <button className="buttons">Documents</button>
+            <button className="buttons">Crypto</button>
+            <button className="buttons">Docs</button>
             <LoginButton />
           </div>
         </div>
