@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-
+import Terms from "./Terms";
 import "./Footer.css";
 
 function Footer() {
@@ -30,8 +30,10 @@ function Footer() {
         </a>
       </div>
       <div className="footer__links">
-        <a href="/">Terms and Conditions </a>
         <a href="/about">About</a>
+        
+        <Terms />
+
         <a href="/contact">Contact</a>
       </div>
       <div className="footer__copyright">
