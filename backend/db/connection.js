@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const db = process.env.db;
+const DB = process.env.DB;
 
 mongoose
-  .connect(db, {
+  .connect(DB, {
     useNewUrlParser: true,
     family: 4,
   })
