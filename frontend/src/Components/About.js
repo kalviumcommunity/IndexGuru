@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import BitCoin from "./images/bitcoin2.png";
 import fund from "./images/ruppee.jpg";
+import Footer from "./Footer";
 
 function About() {
   return (
@@ -50,6 +51,7 @@ function About() {
           on the contact us page.
           <h3>Funky Funding</h3>
         </p>
+        <Footer/>
       </div>
     </>
   );

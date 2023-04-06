@@ -3,6 +3,8 @@ import axios from "axios";
 import "./CryptoTracker.css";
 import { Input } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
+import Footer from "./Footer"
+
 
 function CryptoTracker() {
   const [cryptoData, setCryptoData] = useState([]);
@@ -46,6 +48,7 @@ function CryptoTracker() {
 
   return (
     <>
+    
       <h1 className="future">Invest in the future with IndexGuru</h1>
 
       <div className="container">
@@ -129,6 +132,7 @@ function CryptoTracker() {
           </>
         )}
       </div>
+     <Footer/>
     </>
   );
 }

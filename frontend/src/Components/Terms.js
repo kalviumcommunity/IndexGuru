@@ -4,7 +4,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalFooter,
   ModalBody,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -12,9 +11,9 @@ import {
 function Terms() {
   const OverlayTwo = () => (
     <ModalOverlay
-      bg="none"
+      bg="rgba(0, 0, 0, 0.8)"
       backdropFilter="auto"
-      backdropInvert="80%"
+      backdropInvert="10%"
       backdropBlur="2px"
     />
   );
@@ -22,10 +21,16 @@ function Terms() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayTwo />);
 
+  const handleClick = (event) => {
+    const modal = document.querySelector(".maindiv");
+    if (event.target === modal) {
+      onClose();
+    }
+  };
   return (
     <>
       <button
-        className="terms"
+        className="conditions"
         ml="4"
         onClick={() => {
           setOverlay(<OverlayTwo />);
@@ -36,7 +41,7 @@ function Terms() {
       </button>
       <Modal isOpen={isOpen} onClose={onClose}>
         {overlay}
-        <ModalContent className="maindiv">
+        <ModalContent className="maindiv" onClick={handleClick}>
           <ModalBody className="ModalBody">
             <h1>Terms and Conditions </h1>
             <p className="condition">
@@ -81,9 +86,6 @@ function Terms() {
               </a>
             </p>
           </ModalBody>
-          <ModalFooter>
-            <button onClick={onClose}>Close</button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </>

@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Terms from "./Terms";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -30,11 +31,15 @@ function Footer() {
         </a>
       </div>
       <div className="footer__links">
-        <a href="/about">About</a>
-        
-        <Terms />
+        <Link to="/about">
+          <p>About</p>
+        </Link>
 
-        <a href="/contact">Contact</a>
+        <Terms /> 
+
+        <Link to="/">
+          <p>Home</p>
+        </Link>
       </div>
       <div className="footer__copyright">
         <p>&copy; 2023 IndexGuru</p>
