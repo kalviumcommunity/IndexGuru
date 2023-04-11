@@ -88,13 +88,13 @@ body {
   flex-direction: column;
   border-radius: 20px 20px 20px 20px;
 }
-.buttons2:hover {
+.selection:hover {
   transition: 0.4s;
   letter-spacing: 2px;
   cursor: pointer;
   background-image: linear-gradient(to bottom right, #04fefc 30%, #004e92);
 }
-.buttons2:active {
+.selection:active {
   transform: translateY(3px);
 }
 .rainbow-box {

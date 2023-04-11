@@ -1,8 +1,8 @@
-import React from "react";
 import "../App.css";
 
 export default function FundBox(props) {
   const { fundItem } = props;
+
   return (
     <>
       <div className="heading0">
@@ -36,22 +36,19 @@ export default function FundBox(props) {
         </div>
       </div>
       {/* The investments div start here  */}
+     
       <div className="stats">
-        <div className="stats-heading" onClick={console.log(fundItem)}>
-          Had you invested
-        </div>
-        <div className="priciple" contentEditable={true}>
-          100000
-        </div>
+        <div className="stats-heading">Had you invested</div>
+        <div className="priciple">100000</div>
         <div className="over"> Over the last year</div>
         <div className="rainbow-box ">
-          <div className="buttons2" id="button1">
+          <div className="selection" id="button1">
             1Y
           </div>
-          <div className="buttons2" id="button2">
+          <div className="selection" id="button2">
             3Y
           </div>
-          <div className="buttons2" id="button3">
+          <div className="selection" id="button3">
             ALL
           </div>
         </div>
