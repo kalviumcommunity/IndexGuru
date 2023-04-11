@@ -39,5 +39,6 @@ h1 {
 .conditions:hover{
   background: transparent;
   text-decoration: underline;
+  cursor: pointer;
 
 }

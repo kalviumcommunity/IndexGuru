@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
-import FundBox from "./FundBox";
+import SearchBar from "./SearchBar";
 
 const Home = () => {
   useEffect(() => {
@@ -9,9 +8,8 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Navbar />
-      {/* <FundBox /> */}
-      <Footer />
+    <SearchBar/>
+    <Footer/>
     </>
   );
 };

@@ -1,0 +1,43 @@
+.explorer-container{
+    height: 100vw;
+    background-color: white;
+    padding: 0px;
+}
+.targets{
+    display: flex;
+    flex-direction: column;
+  
+ 
+}
+.but-container{
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.but-container2{
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.sub-buttons{
+    background-color: #3498db;
+    border-radius: 10px;
+    width: 10vw;
+    height: 45px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #3498db;
+    color: #fff;
+    
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.explore-table{
+    margin-top: 50px;
+}

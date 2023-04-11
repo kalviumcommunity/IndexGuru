@@ -1,8 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React, { useState } from "react";
 import "./Navbar.css";
-// import useState  from "react";
-// import { FaSignOutAlt } from "react-icons/fa";
 
 const LoginButton = () => {
   const [alert, setAlert] = useState(false);
@@ -20,7 +18,7 @@ const LoginButton = () => {
           />
         </>
       ) : (
-        <button onClick={() => loginWithRedirect()} className="buttons">
+        <button onClick={() => loginWithRedirect()} className="buttons loginButtons">
           Log In
         </button>
       )}
