@@ -3,8 +3,6 @@ import axios from "axios";
 import "./CryptoTracker.css";
 import { Input } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 function CryptoTracker() {
   const [cryptoData, setCryptoData] = useState([]);
@@ -18,11 +16,15 @@ function CryptoTracker() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false`
         );
 
         setCryptoData(response.data);
-        setIsLoading(false);
+        if (response.data) {
+          setTimeout(() => {
+            setIsLoading(false);
+          }, 1500);
+        }
       } catch (error) {
         console.log(error);
       }
@@ -44,17 +46,18 @@ function CryptoTracker() {
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredCryptoData.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredCryptoData.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   return (
-
-    <>
-   
+    <div className="cryptoContainer">
       <h1 className="future">Invest in the future with IndexGuru</h1>
 
       <div className="container">
         <div className="search-bar-holder">
-          <Input 
+          <Input
             color="tomato"
             placeholder="Cryptos at your fingertips..."
             _placeholder={{ opacity: 1, color: "tomato" }}
@@ -63,13 +66,17 @@ function CryptoTracker() {
           />
         </div>
         {isLoading ? (
+          <div className="spinner">
           <Spinner
-            thickness="4px"
-            speed="0.88s"
-            emptyColor="gray"
-            color="green"
-            size="Xl"
-          />
+          thickness='10'
+          emptyColor="black"
+          speed='0.85s'
+          color='red'
+          size='xl'
+          height={65}
+          width={65}
+/>
+        </div>
         ) : (
           <>
             <ul className="crypto-list">
@@ -112,7 +119,8 @@ function CryptoTracker() {
               >
                 Previous
               </button>
-              <button                 onClick={() => paginate(currentPage + 1)}
+              <button
+                onClick={() => paginate(currentPage + 1)}
                 disabled={indexOfLastItem >= filteredCryptoData.length}
               >
                 Next
@@ -121,17 +129,9 @@ function CryptoTracker() {
           </>
         )}
       </div>
-      <div className="footerz">
-        <Footer/>
-      </div>  
-      </>
-
-  
-
-    
-  
+      <div className="footerz"></div>
+    </div>
   );
 }
 
 export default CryptoTracker;
-

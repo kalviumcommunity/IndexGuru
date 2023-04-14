@@ -8,6 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
 import TextField from "@mui/material/TextField";
+import Typewriter from "typewriter-effect";
 import "./Explore.css";
 
 const Explore = () => {
@@ -46,7 +47,7 @@ const Explore = () => {
   };
 
   return (
-    <>
+    <div className="abc">
       <div className="explorer-container">
         <div className="targets">
         <div className="but-container">
@@ -70,7 +71,7 @@ const Explore = () => {
        
         {activeFunds.length > 0 ? (
           <div className="explore-table">
-            <TextField
+            <TextField className="search3"
               label="Search"
               variant="outlined"
               value={searchText}
@@ -94,8 +95,8 @@ const Explore = () => {
                     </TableCell>
                     <TableCell>Category</TableCell>
                     <TableCell>Sub-Category</TableCell>
-                    <TableCell>one_year_return</TableCell>
-                    <TableCell>three_year_return</TableCell>
+                    <TableCell>One Year Return</TableCell>
+                    <TableCell>Three Year Return</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -111,8 +112,8 @@ const Explore = () => {
                         <TableCell>{fund.name}</TableCell>
                         <TableCell>{fund.category}</TableCell>
                         <TableCell>{fund.sub_category}</TableCell>
-                        <TableCell>{fund.one_year_return}</TableCell>
-                        <TableCell>{fund.three_year_return}</TableCell>
+                        <TableCell>{fund.one_year_return}%</TableCell>
+                        <TableCell>{fund.three_year_return}%</TableCell>
                       </TableRow>
                     ))}
                 </TableBody>
@@ -120,10 +121,22 @@ const Explore = () => {
             </TableContainer>
           </div>
         ) : (
-          <div>No active funds found.</div>
+          <div className="noactive"> <span className="typewriter">
+          <Typewriter
+            options={{
+              autoStart: true,
+              loop: true,
+              delay: 40,
+              strings: [
+                "No Active Funds Found...",
+                "Click on the other categories to explore more",
+              ],
+            }}
+          />
+        </span></div>
         )}
       </div>
-    </>
+      </div>
   );
 };
 

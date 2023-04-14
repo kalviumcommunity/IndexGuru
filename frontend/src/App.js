@@ -4,6 +4,7 @@ import Home from "./Components/Home";
 import { Route, Routes } from "react-router-dom";
 import Explore from "./Components/Explore";
 import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/crypto" element={<CryptoTracker />} />
       <Route path = "/explore" element={<Explore/>}/>
     </Routes>
+    <Footer/>
     </>
   );
 }

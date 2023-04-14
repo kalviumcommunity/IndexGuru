@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +8,44 @@
 /*Fundbox*/
 
 .fundboxContainer{
-  background-image: linear-gradient(to right, #DCE5EF 10%, #F2F5F9);
+  background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
+
 }
-.graph {
-  height: 80vh;
-  padding-top: 20px;
+.card-div{
+  height: 90vh;
+
+
+}
+.flex-div{
+  margin: 10px;
+  width: 80%;
+  margin: auto auto auto auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+
+}
+.fund-stats{
+  border-bottom: 1px solid silver;
+
+  text-align: left;
+  display: flex;
+   justify-content: space-between;
+}
+.stats-value{
+  color: #0879dc;
+  font-size: 35px;
+  font-family: 'Roboto Slab', serif;
+   text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82); 
+}
+
+.stats-topics{
+  color: purple;
+  font-size: 45px ;
+  font-family: 'Roboto Slab', serif;  
+  color: #004e92;
 }
 
 .investment {
@@ -33,6 +67,11 @@
   font-size: 3em;
   color: #ffb711;
 }
+.fund-name{
+  font-size: 45px ;
+  font-family: 'Roboto Slab', serif;  
+  color: #004e92;
+}
 .information {
   display: flex;
   align-items: center;
@@ -52,23 +91,56 @@
 }
 .stats-heading {
   font-size: 75px;
-  font-family: "Lora", serif;
-  color: #ffb711;
+  font-family: 'Roboto Slab', serif;  
+  color: #004e92;
 }
 .priciple {
   font-size: 55px;
-  font-family: "Lora", serif;
-  color: #ffb711;
+  font-family: 'Roboto Slab', serif;  
+  color: #0879dc;
 }
 .over {
-  font-size: 30px;
-  color: #ffb711;
+  font-size: 35px;
+  width: 15vw;
+  color: #0879dc;
+
+
+}
+.principleAmount{
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 16px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.principleAmount:focus{
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.button-box {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+  height: 6vh;
+  width: 34vw;
+
+  font-size: 28px;
+  font-family: 'Roboto Slab', serif;   
+  text-align: center;
+
 }
 
-#button1,
-#button3 {
+#button1, #button2{
   width: 5vw;
-  color: aliceblue;
+  color: #0879dc;
+
   border: none;
   height: 5vh;
   display: flex;
@@ -77,17 +149,7 @@
   flex-direction: column;
   border-radius: 20px 20px 20px 20px;
 }
-#button2 {
-  width: 5vw;
-  color: aliceblue;
-  border: none;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 20px 20px 20px 20px;
-}
+
 .selection:hover {
   transition: 0.4s;
   letter-spacing: 2px;
@@ -97,56 +159,44 @@
 .selection:active {
   transform: translateY(3px);
 }
-.rainbow-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 6vh;
-  width: 18vw;
-  padding: 16px;
-  border-radius: 20px 20px 20px 20px;
-  border: 0px solid #f60000;
-  color: aliceblue;
-  font-size: 20px;
-  font-family: "Lora", serif;
-  text-align: center;
 
-  box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
-  -webkit-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
-  -moz-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
-
-  text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82);
-}
 .heading1 {
   font-size: 50px;
   text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82);
 }
 .returns {
-  color: white;
-  height: 50vh;
-  width: 50%;
+  color: #0879dc;
+  height: 60vh;
+  width: 100%;
   margin-top: 80px;
-  padding: 20px 20px;
-  font-family: "Lora", serif;
-  margin-left: 450px;
-  box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
-  -webkit-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
-  -moz-box-shadow: 4px 7px 55px -6px rgba(4, 254, 252, 0.53);
+  padding: 20px;
+  font-family: 'Roboto Slab', serif;   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.valueReturns{
+  color: #f60000ea;
 }
 .return-box {
   display: flex;
+  margin-top: 15px;
+  padding: 20px;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  font-size: 25px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  padding: 10px;
   height: 100%;
+  width: 100%;
 }
 
 /*SearchBar*/
 .typewriter{
-  color: #ffb711;
-  font-size: 2.5rem;
-  font-family: "Lora", serif;
+  color: #004e92;
+  font-size: 2.4rem;
+  font-family: 'Roboto Slab', serif;   
   font-weight: bolder;
 
 }
@@ -158,7 +208,7 @@
   padding: 20px;
   width: 100%;
  
-  background-image: linear-gradient(to right, #DCE5EF 10%, #F2F5F9);
+  background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
 }
 
 .justSearch{
@@ -201,14 +251,14 @@
 .search-results {
   position: absolute;
   right: 51%;
-  top: 53%;
+  top: 48%;
   height: 30vh;
   z-index: 1;
   font-size: 1.1rem;
   font-weight: 800;
   overflow: hidden;
   overflow-y: auto;
-  background-image: linear-gradient(to bottom right, #fefefe 20% , #dae6f6 );
+  background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
 }
 
 .search-results p {
@@ -224,6 +274,7 @@
   cursor: pointer;
   color: #ffb711;
   transition: 0.1s;
+  border-bottom: 1px solid #ffb711;
 }
 .search-results p:active {
   transform: translateY(1px);
