@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Footer from "./Footer";
 import SearchBar from "./SearchBar";
 
 const Home = () => {
@@ -9,7 +8,6 @@ const Home = () => {
   return (
     <>
     <SearchBar/>
-    <Footer/>
     </>
   );
 };

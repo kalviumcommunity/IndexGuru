@@ -12,7 +12,7 @@ function SearchBar() {
   const [fund, setFund] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/apis/v1/funds").then((resp) => {
+    axios.get(process.env.REACT_APP_API_URL).then((resp) => {
       setFundsData(resp.data);
       console.log(resp.data);
     });

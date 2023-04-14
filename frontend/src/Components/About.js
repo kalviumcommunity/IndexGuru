@@ -2,7 +2,6 @@ import React from "react";
 import "./About.css";
 import BitCoin from "./images/bitcoin2.png";
 import fund from "./images/ruppee.jpg";
-import Navbar from "./Navbar";
 
 function About() {
   return (
