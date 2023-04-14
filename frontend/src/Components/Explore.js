@@ -18,7 +18,7 @@ const Explore = () => {
   const [searchText, setSearchText] = useState("");
 
   const handleClick = async (e) => {
-    await axios.get("http://localhost:8000/apis/v1/funds").then((resp) => {
+    await axios.get(process.env.REACT_APP_API_URL).then((resp) => {
       setActiveFunds(
         resp.data.filter((item) => {
           return item.sub_category === e.target.innerText;
@@ -50,38 +50,61 @@ const Explore = () => {
     <div className="abc">
       <div className="explorer-container">
         <div className="targets">
-        <div className="but-container">
-          <button onClick={handleClick} className="sub-buttons">Medium Duration Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Sectoral/Thematic</button>
-        <button onClick={handleClick} className="sub-buttons">Small Cap Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Large Cap Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Mid Cap Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Dynamic Bond</button>
+          <div className="but-container">
+            <button onClick={handleClick} className="sub-buttons">
+              Medium Duration Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Sectoral/Thematic
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Small Cap Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Large Cap Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Mid Cap Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Dynamic Bond
+            </button>
+          </div>
+          <div className="but-container2">
+            <button onClick={handleClick} className="sub-buttons">
+              Medium to Long
+              <br /> Duration Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Focused Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Fund of Funds
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Flexi Cap Fund
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Index Funds
+            </button>
+            <button onClick={handleClick} className="sub-buttons">
+              Contra Fund
+            </button>
+          </div>
         </div>
-        <div className="but-container2">
-        <button onClick={handleClick} className="sub-buttons">Medium to Long<br/> Duration Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Focused Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Fund of Funds</button>
-        <button onClick={handleClick} className="sub-buttons">Flexi Cap Fund</button>
-        <button onClick={handleClick} className="sub-buttons">Index Funds</button>
-        <button onClick={handleClick} className="sub-buttons">Contra Fund</button>
-        </div>
-        </div>
-        
-       
+
         {activeFunds.length > 0 ? (
           <div className="explore-table">
-            <TextField className="search3"
+            <TextField
+              className="search3"
               label="Search"
               variant="outlined"
               value={searchText}
               onChange={handleSearch}
             />
-        
-            <TableContainer className="TableContainer">
-              
-              <Table>
 
+            <TableContainer className="TableContainer">
+              <Table>
                 <TableHead>
                   <TableRow>
                     <TableCell>
@@ -121,23 +144,26 @@ const Explore = () => {
             </TableContainer>
           </div>
         ) : (
-          <div className="noactive"> <span className="typewriter">
-          <Typewriter
-            options={{
-              autoStart: true,
-              loop: true,
-              delay: 40,
-              strings: [
-                "No Active Funds Found...",
-                "Click on the other categories to explore more",
-              ],
-            }}
-          />
-        </span></div>
+          <div className="noactive">
+            {" "}
+            <span className="typewriter">
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 40,
+                  strings: [
+                    "No Active Funds Found...",
+                    "Click on the other categories to explore more",
+                  ],
+                }}
+              />
+            </span>
+          </div>
         )}
       </div>
-      </div>
+    </div>
   );
 };
 
-export default Explore
+export default Explore;
