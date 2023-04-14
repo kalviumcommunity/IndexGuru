@@ -77,7 +77,7 @@ export default function FundBox(props) {
         <div className="stats">
           <div className="stats-heading">Had you invested</div>
           <div className="priciple">
-            {" "}
+           
             <input
               className="principleAmount"
               value={input}

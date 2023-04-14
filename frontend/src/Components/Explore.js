@@ -145,7 +145,7 @@ const Explore = () => {
           </div>
         ) : (
           <div className="noactive">
-            {" "}
+           
             <span className="typewriter">
               <Typewriter
                 options={{
