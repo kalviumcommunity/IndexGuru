@@ -7,7 +7,8 @@ const Fund = require("./models/fundSchema");
 const { find } = require("./models/fundSchema");
 require("./db/connection");
 
-app.use(express.json());
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cors());
 
 app.get("/apis/v1/funds", async (req, resp) => {
@@ -25,56 +26,16 @@ app.get("/apis/v1/funds", async (req, resp) => {
 });
 
 app.post("/apis/v1/funds", async (req, resp) => {
-  const {
-    name,
-    category,
-    amc,
-    sub_category,
-    unique_fund_code,
-    kuvera_id,
-    asset_class_name,
-    one_year_return,
-    three_year_return,
-    current_nav,
-    Scheme_plan,
-    slug,
-    tags,
-    one_day_return,
-    short_name,
-    short_code,
-    rating,
-    fund_active,
-    ter,
-  } = req.body;
+  const fundsData = req.body;
   try {
-    const funds = await Fund.create({
-      name,
-      category,
-      amc,
-      sub_category,
-      unique_fund_code,
-      kuvera_id,
-      asset_class_name,
-      one_year_return,
-      three_year_return,
-      current_nav,
-      Scheme_plan,
-      slug,
-      tags,
-      one_day_return,
-      short_name,
-      short_code,
-      rating,
-      fund_active,
-      ter,
-    });
+    const funds = await Fund.insertMany(fundsData);
     if (!funds) {
       resp.send("Empty");
     } else {
       resp.status(200).json(funds);
     }
   } catch (e) {
-    resp.status(500).json({ error: e });
+    resp.status(500).json({ error: e.message });
   }
 });
 

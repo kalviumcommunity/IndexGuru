@@ -31,7 +31,7 @@ function Carousel() {
                 src={image.Pictures}
                 alt="image_here"
               />
-              <div className="card_overlay"></div>
+              
             </div>
           );
         })}

@@ -44,6 +44,7 @@ function Footer() {
       <div className="footer__copyright">
         <p>&copy; 2023 IndexGuru</p>
       </div>
+      
     </footer>
   );
 }

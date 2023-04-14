@@ -42,7 +42,7 @@ const FundSchema = new Schema({
     type: Number,
     required: true,
   },
-  Scheme_plan: {
+  scheme_plan: {
     type: String,
     required: true,
   },
@@ -76,7 +76,6 @@ const FundSchema = new Schema({
   },
   ter: {
     type: Number,
-    required: true,
   },
 });
 

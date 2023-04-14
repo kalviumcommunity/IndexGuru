@@ -9,17 +9,17 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Auth0Provider
-        domain={process.env.REACT_APP_DOMAIN}
-        clientId={process.env.REACT_APP_CLIENT}
-        authorizationParams={{
-          redirect_uri: window.location.origin,
-        }}
-      >
+    <Auth0Provider
+      domain={process.env.REACT_APP_DOMAIN}
+      clientId={process.env.REACT_APP_CLIENT}
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+      }}
+    >
+      <BrowserRouter>
         <App />
-      </Auth0Provider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Auth0Provider>
   </React.StrictMode>
 );
 
