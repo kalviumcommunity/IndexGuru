@@ -83,6 +83,7 @@
   color: #ffb711;
 }
 .stats {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,6 +94,7 @@
   font-size: 75px;
   font-family: 'Roboto Slab', serif;  
   color: #004e92;
+  margin-top: 25px;
 }
 .priciple {
   font-size: 55px;
