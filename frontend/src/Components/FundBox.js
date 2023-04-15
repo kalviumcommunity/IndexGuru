@@ -1,6 +1,6 @@
 import "../App.css";
 import { useState } from "react";
-import Spline from "@splinetool/react-spline";
+import Spline from '@splinetool/react-spline';
 
 export default function FundBox(props) {
   const { fundItem } = props;
