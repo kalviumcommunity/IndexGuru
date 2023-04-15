@@ -28,7 +28,6 @@
 
 }
 .fund-stats{
-  border-bottom: 1px solid silver;
 
   text-align: left;
   display: flex;
@@ -43,7 +42,7 @@
 
 .stats-topics{
   color: purple;
-  font-size: 45px ;
+  font-size: 38px ;
   font-family: 'Roboto Slab', serif;  
   color: #004e92;
 }
