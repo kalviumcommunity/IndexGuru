@@ -31,11 +31,7 @@ function Footer() {
         </a>
       </div>
       <div className="footer__links">
-        {/* <Link to="/about">
-          <p>About</p>
-        </Link> */}
 
-        {/* <Terms />  */}
 
         <Link to="/">
           <p>Home</p>

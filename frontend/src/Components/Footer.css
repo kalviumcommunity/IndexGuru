@@ -23,7 +23,7 @@
 
 .footer__links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 1.8rem;
  
   width: 30vw;
