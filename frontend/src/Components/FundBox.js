@@ -131,8 +131,7 @@ export default function FundBox(props) {
                 : `${fundItem.short_name} [1D]`}
               : <span className="valueReturns"> {totalAmount.one_day} </span>
             </div>
-            <div className="three-fields">Fixed Deposite </div>
-            <div className="three-fields">Banking Saving</div>
+ 
           </div>
         </div>
       </div>
