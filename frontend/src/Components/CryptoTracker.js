@@ -44,12 +44,12 @@ function CryptoTracker() {
   // Pagination logic
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredCryptoData.slice(
-    indexOfFirstItem,
-    indexOfLastItem
-  );
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = filteredCryptoData.slice(
+      indexOfFirstItem,
+      indexOfLastItem
+    );
 
   return (
     <div className="cryptoContainer">

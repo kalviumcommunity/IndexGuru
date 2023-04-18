@@ -14,13 +14,14 @@ export default function Navbar() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = docsPDF; // Replace docsPDF with the imported PDF file
-    link.download = 'Investment Guide.pdf'; // Set the desired file name
+    link.href = docsPDF; 
+    link.download = 'Investment Guide.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
   
+
 
 
 

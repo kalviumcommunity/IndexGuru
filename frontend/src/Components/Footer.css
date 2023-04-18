@@ -1,5 +1,6 @@
 
 .footer {
+  border-top: 1px solid #0879dc ;
   background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
   display: flex;
   flex-direction: column;
@@ -23,7 +24,7 @@
 
 .footer__links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 1.8rem;
  
   width: 30vw;
