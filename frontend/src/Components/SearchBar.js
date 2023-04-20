@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import FundBox from "./FundBox";
 import Carousel from "./Carousel";
@@ -10,21 +9,34 @@ function SearchBar() {
   const [search, setSearch] = useState("");
   const [FundsData, setFundsData] = useState(null);
   const [fund, setFund] = useState(null);
+  const searchRef = useRef(null);
 
   useEffect(() => {
     axios.get(process.env.REACT_APP_API_URL).then((resp) => {
       setFundsData(resp.data);
-      console.log(resp.data);
     });
+
+    const handleClickOutside = (event) => {
+      if (searchRef.current && searchRef.current.contains(event.target)) {
+        setSearch("");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
+
   return (
     <>
       <div className="search-carousel">
-        <div className="justSearch">
+        <div className="justSearch" ref={searchRef}>
           <input
             type="text"
             value={search}
@@ -53,7 +65,7 @@ function SearchBar() {
               const searchedTerm = search.toLowerCase().trim();
               const fullName = e.name.toLowerCase();
 
-              return searchedTerm && fullName.startsWith(searchedTerm);
+              return searchedTerm && fullName.includes(searchedTerm);
             }).map((funds) => {
               return (
                 <p
