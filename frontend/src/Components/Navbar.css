@@ -63,17 +63,7 @@
   cursor: pointer;
 }
 
-.search-icon {
-  position: relative;
-  right: 35px;
-  top: 2px;
-}
-.search-icon:active {
-  transform: translateY(2px);
-}
-.search-icon:hover {
-  cursor: pointer;
-}
+
 
 .buttons:active {
   transform: translateY(3px);
@@ -125,60 +115,42 @@
   color: #ffb711;
 }
 
-@media (max-width: 480px) {
-  .logged-btn {
-    border-radius: 10rem;
-    padding: 0.4rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .logoutAlert {
-    width: 24rem;
-    right: 8px;
-  }
-}
-
-/* CSS for screens smaller than 768px (i.e. tablets and mobile devices) */
-@media only screen and (max-width: 768px) {
-  .logo {
-    height: 20vh;
-    width: 20vh;
-    margin-top: 5px;
-  }
-
+/*Responsiveness*/
+@media screen and (max-width: 768px) {
   .Navbar {
     height: auto;
-    padding: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .links {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1rem 0;
+  }
+  .buttons {
+    height: auto;
+    width: auto;
+    margin: 1rem 0;
+  }
+  .search-icon {
+    display: none;
+  }
+  .logoutAlert {
+    width: 90%;
+    font-size: 1rem;
+  }
+  .alert-btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 50%;
+  }
+  .loginButtons{
+    width: 18vw;
+  }
+  .buttons:active {
+    transform: translateY(3px);
   }
 
-  .search-bar {
-    height: 4vh;
-    width: 80%;
-    margin: 10px 0;
-    font-size: 16px;
-  }
-
-  .searchBarHolder {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .links {
-    flex-direction: column;
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .search-results {
-    top: 18%;
-  }
-
-  .funk-container {
-    font-size: 60px;
-    margin-top: 50px;
-  }
 }

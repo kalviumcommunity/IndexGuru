@@ -5,6 +5,8 @@
   padding: 0;
   
 }
+
+
 /*Fundbox*/
 
 .fundboxContainer{
@@ -28,7 +30,6 @@
 
 }
 .fund-stats{
-
   text-align: left;
   display: flex;
    justify-content: space-between;
@@ -41,48 +42,21 @@
 }
 
 .stats-topics{
-  color: purple;
   font-size: 38px ;
   font-family: 'Roboto Slab', serif;  
   color: #004e92;
 }
 
-.investment {
-  background-color: gray;
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.invest-return {
-  height: 30vh;
-  width: 100%;
-}
-.fund-name {
-  text-align: center;
-  font-size: 3em;
-  color: #ffb711;
-}
+
+
+
 .fund-name{
   font-size: 45px ;
   font-family: 'Roboto Slab', serif;  
   color: #004e92;
 }
-.information {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Lora", serif;
-  color: #ffb711;
-}
-.stats {
 
+.stats {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,9 +78,8 @@
   font-size: 35px;
   width: 15vw;
   color: #0879dc;
-
-
 }
+
 .principleAmount{
   width: 100%;
   max-width: 400px;
@@ -193,6 +166,8 @@
   width: 100%;
 }
 
+/*FundBox End*/
+
 /*SearchBar*/
 .typewriter{
   color: #004e92;
@@ -231,8 +206,6 @@
   outline: none;
   margin: auto;
   outline: none;
-
-
 }
 
 .search-bar:focus{
@@ -278,4 +251,51 @@
 }
 .search-results p:active {
   transform: translateY(1px);
+}
+/*Responsiveness*/
+
+
+@media screen and (max-width: 768px) {
+  .search-carousel{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+   }
+   .justSearch{
+ 
+    height: 20vh;
+  }
+   .search-bar {
+    height: 6vh;
+    width: 90%;
+     text-align: center;
+    font-size: 13px;
+    outline: none;
+    margin: auto;
+    outline: none;
+  }
+  .search-bar::placeholder{
+    font-size: 13px;
+  }
+  .search-results {
+    position: absolute;
+    right: 32%;
+    top: 70%;
+    height: 35vh;
+    font-size: 13px;
+}
+.search-results p{
+  margin: 8px;
+}
+.typewriter{
+  color: #004e92;
+  font-size: 14px;
+  font-family: 'Roboto Slab', serif;   
+  font-weight: bolder;
+  margin-bottom: 25px;
+
+}
+
+  
 }
