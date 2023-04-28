@@ -6,15 +6,12 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import TableSortLabel from "@mui/material/TableSortLabel";
 import TextField from "@mui/material/TextField";
 import Typewriter from "typewriter-effect";
 import "./Explore.css";
 
 const Explore = () => {
   const [activeFunds, setActiveFunds] = useState([]);
-  const [orderBy, setOrderBy] = useState("");
-  const [order, setOrder] = useState("asc");
   const [searchText, setSearchText] = useState("");
 
   const handleClick = async (e) => {
@@ -26,22 +23,6 @@ const Explore = () => {
       );
     });
   };
-
-  const handleSort = (property) => {
-    const isAsc = orderBy === property && order === "asc";
-    setOrderBy(property);
-    setOrder(isAsc ? "desc" : "asc");
-    setActiveFunds((prevActiveFunds) =>
-      [...prevActiveFunds].sort((a, b) => {
-        if (isAsc) {
-          return a[property].localeCompare(b[property]);
-        } else {
-          return b[property].localeCompare(a[property]);
-        }
-      })
-    );
-  };
-
   const handleSearch = (e) => {
     setSearchText(e.target.value.toLowerCase());
   };
@@ -108,13 +89,6 @@ const Explore = () => {
                 <TableHead>
                   <TableRow>
                     <TableCell>
-                      <TableSortLabel
-                        active={orderBy === "name"}
-                        direction={orderBy === "name" ? order : "asc"}
-                        onClick={() => handleSort("name")}
-                      >
-                        Name
-                      </TableSortLabel>
                     </TableCell>
                     <TableCell>Category</TableCell>
                     <TableCell>Sub-Category</TableCell>
