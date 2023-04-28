@@ -17,7 +17,7 @@ function SearchBar() {
     });
 
     const handleClickOutside = (event) => {
-      if (searchRef.current && searchRef.current.contains(event.target)) {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
         setSearch("");
       }
     };
@@ -36,7 +36,7 @@ function SearchBar() {
   return (
     <>
       <div className="search-carousel">
-        <div className="justSearch" ref={searchRef}>
+        <div className="justSearch" >
           <input
             type="text"
             value={search}
@@ -59,7 +59,7 @@ function SearchBar() {
           </span>
         </div>
 
-        <div className="search-results" id="search-result-holder">
+        <div className="search-results" id="search-result-holder" ref={searchRef}>
           {FundsData &&
             FundsData.filter((e) => {
               const searchedTerm = search.toLowerCase().trim();

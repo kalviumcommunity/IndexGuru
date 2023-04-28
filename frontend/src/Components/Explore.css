@@ -63,3 +63,20 @@
 .search3{
     margin-top: 20px;
 }
+/* For screens with a width of 768px or less */
+@media (max-width: 768px) {
+    .sub-buttons{
+
+        width: 15vw;
+        height: 55px;
+        text-align: center;
+        font-size: 10px;
+        color: #fff; 
+        margin: 3px;
+
+    }
+
+
+
+}
+  

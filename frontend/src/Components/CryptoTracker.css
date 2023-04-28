@@ -150,3 +150,19 @@
   opacity: 0.8;
   color: #0879dc;
 }
+@media screen and (max-width: 768px) {
+  .future {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 35px;
+    padding: 15px;
+    color: #0879dc;
+    font-weight: 600;
+   
+    font-family: "Lora", serif;
+    text-transform: none;
+    
+  }
+}
