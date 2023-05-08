@@ -32,13 +32,13 @@
 .fund-stats{
   text-align: left;
   display: flex;
-   justify-content: space-between;
+  justify-content: space-between;
 }
 .stats-value{
   color: #0879dc;
   font-size: 35px;
   font-family: 'Roboto Slab', serif;
-   text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82); 
+  text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82); 
 }
 
 .stats-topics{
@@ -54,6 +54,7 @@
   font-size: 45px ;
   font-family: 'Roboto Slab', serif;  
   color: #004e92;
+ text-align: center;
 }
 
 .stats {
@@ -225,7 +226,7 @@
 .search-results {
   position: absolute;
   right: 51%;
-  top: 53%;
+  top: 45%;
   height: 30vh;
   z-index: 1;
   font-size: 1.1rem;
@@ -233,6 +234,14 @@
   overflow: hidden;
   overflow-y: auto;
   background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
+}
+.tradingview-widget-container{
+  height: 80vh;
+  width: 60vw;
+  margin: auto;
+}
+#tradingview_6b9c4{
+  height: 80%;
 }
 
 .search-results p {
