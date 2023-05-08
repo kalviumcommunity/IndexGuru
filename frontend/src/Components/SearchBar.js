@@ -4,7 +4,8 @@ import FundBox from "./FundBox";
 import Carousel from "./Carousel";
 import "../App.css";
 import Typewriter from "typewriter-effect";
-
+import TradingViewWidget from "./Graph";
+import NewsViewWidget from "./News";
 function SearchBar() {
   const [search, setSearch] = useState("");
   const [FundsData, setFundsData] = useState(null);
@@ -35,6 +36,8 @@ function SearchBar() {
 
   return (
     <>
+  
+    <TradingViewWidget/>
       <div className="search-carousel">
         <div className="justSearch" >
           <input
@@ -81,8 +84,11 @@ function SearchBar() {
         </div>
         <div></div>
         <Carousel />
+       
       </div>
       <FundBox fundItem={fund} />
+  
+    
     </>
   );
 }

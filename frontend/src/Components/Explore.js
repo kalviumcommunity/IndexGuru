@@ -31,7 +31,7 @@ const Explore = () => {
     <div className="abc">
       <div className="explorer-container">
         <div className="targets">
-          <div className="but-container">
+        <div className="but-container">
             <button onClick={handleClick} className="sub-buttons">
               Medium Duration Fund
             </button>
@@ -115,6 +115,7 @@ const Explore = () => {
                     ))}
                 </TableBody>
               </Table>
+
             </TableContainer>
           </div>
         ) : (

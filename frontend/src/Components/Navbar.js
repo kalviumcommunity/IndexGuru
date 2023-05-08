@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import docsPDF from "./assets/Investment Guide.pdf"
 import { FaDownload } from "react-icons/fa";
 import { FaFeatherAlt } from "react-icons/fa";
+import TicketViewWidget from "./ticketTape";
 
 
 
@@ -46,6 +47,7 @@ export default function Navbar() {
           </div>
         </div>
         </header>
+        <TicketViewWidget/>
       
     </>
   );
