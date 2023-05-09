@@ -31,7 +31,7 @@ export default function TicketViewWidget() {
         if (document.getElementById('tradingview_6b9c4') && 'TradingView' in window) {
           new window.TradingView.widget({
             autosize: true,
-            symbol: "NASDAQ:AAPL",
+            symbol: "AXISGOLD",
             interval: "D",
             timezone: "Etc/UTC",
             theme: "light",

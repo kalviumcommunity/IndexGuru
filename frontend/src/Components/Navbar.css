@@ -11,7 +11,7 @@
 }
 .Navbar {
   height: 15vh;
-  background-image: linear-gradient(to right, #e2eefb 50%, #f2f5f9);
+  /* background-image: linear-gradient(to right, #e2eefb 50%, #f2f5f9); */
   display: flex;
   justify-content: space-between;
   align-items: center;
