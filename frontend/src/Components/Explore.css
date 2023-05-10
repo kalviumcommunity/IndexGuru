@@ -1,7 +1,4 @@
-.abc{
-    background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
-   
-}
+
 
 .explorer-container{
     height: max-content;
@@ -10,7 +7,7 @@
 .targets{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
+    /* background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9); */
     border-top: 1px solid #004e92;
 
  

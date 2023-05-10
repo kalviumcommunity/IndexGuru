@@ -9,15 +9,42 @@
 
 /*Fundbox*/
 
-.fundboxContainer{
-  background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
-
-}
 .card-div{
   height: 90vh;
-
-
+  border: 1px solid red;
 }
+.NAV{
+  height: 15vh;
+  border: 1px solid black;
+  width: 20%;
+  margin: 5rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.current_nav{
+  color: #10b983;
+}
+
+
+.short_name{
+  height: 15vh;
+  border: 1px solid black;
+  width: 20%;
+  margin: 5rem;
+}
+
+.return_values{
+  height: 15vh;
+  border: 1px solid black;
+  width: 20%;
+  margin: 5rem;
+}
+
+
 .flex-div{
   margin: 10px;
   width: 80%;
@@ -185,7 +212,7 @@
   padding: 20px;
   width: 100%;
  
-  background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
+  /* background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9); */
 }
 
 .justSearch{
@@ -235,6 +262,10 @@
   overflow-y: auto;
   background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
 }
+
+
+/*Tickets*/
+
 .tradingview-widget-container{
   height: 80vh;
   width: 60vw;

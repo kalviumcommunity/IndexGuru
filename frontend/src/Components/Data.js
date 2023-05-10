@@ -1,16 +1,20 @@
 import image1 from "./images/img1.jpg";
 import image2 from "./images/img2.png";
 import image3 from "./images/img3.png";
-import image4 from "./images/img4.jpg";
+import image4 from "./images/img4.png";
 import image5 from "./images/img5.png";
 import image6 from "./images/img6.png";
 import image7 from "./images/img7.png";
 import image8 from "./images/img8.png";
-import image9 from "./images/img9.png";
+import image9 from "./images/img9.webp";
 import image10 from "./images/img10.png";
-import image11 from "./images/img11.webp";
-import image12 from "./images/img12.png";
-import image13 from "./images/img13.png";
+import image11 from "./images/img11.png";
+import image12 from "./images/img12.jfif";
+import image13 from "./images/img13.jpg";
+import image14 from "./images/img14.jpg";
+import image15 from "./images/img15.jpg";
+import image16 from "./images/img16.jpg";
+import image17 from "./images/img17.jpg";
 
 export const pictures = [
   {
@@ -63,6 +67,22 @@ export const pictures = [
   },
   {
     Pictures: image13,
+    title: "A",
+  },
+  {
+    Pictures: image14,
+    title: "A",
+  },
+  {
+    Pictures: image15,
+    title: "A",
+  },
+  {
+    Pictures: image16,
+    title: "A",
+  },
+  {
+    Pictures: image17,
     title: "A",
   },
 ];

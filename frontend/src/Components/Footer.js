@@ -1,11 +1,11 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import "./Footer.css";
-// import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <footer className="footer">
+
+   
       <div className="footer__social">
         <a
           href="https://github.com/AnjaniKumar1515"
@@ -30,16 +30,11 @@ function Footer() {
         </a>
       </div>
       <div className="footer__links">
-
-
-        {/* <Link to="/">
-          <p>Home</p>
-        </Link> */}
       </div>
       <div className="footer__copyright">
         <p>&copy; 2023 IndexGuru</p>
       </div>
-      
+ 
     </footer>
   );
 }

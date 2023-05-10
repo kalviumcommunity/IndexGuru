@@ -6,6 +6,7 @@ import { Spinner } from "@chakra-ui/react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { registerables } from "chart.js";
+import TicketViewWidget from "./ticketTape";
 
 function CryptoTracker() {
   const [cryptoData, setCryptoData] = useState([]);
@@ -42,7 +43,7 @@ function CryptoTracker() {
     const fetchChartData = async () => {
       try {
         const response = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/${selectedCrypto}/market_chart?vs_currency=usd&days=30&interval=daily`
+          `https://api.coingecko.com/api/v3/coins/${selectedCrypto}/market_chart?vs_currency=usd&days=30&interval=daily`,{crossDomain:true}
         );
         const chartData = {
           labels: response.data.prices.map((data) =>
@@ -94,7 +95,7 @@ function CryptoTracker() {
   return (
     <div className="cryptoContainer">
       <h1 className="future">Invest in the future with IndexGuru</h1>
-
+      <TicketViewWidget/>
       <div className="container">
         <div className="search-bar-holder">
           <Input
@@ -194,7 +195,11 @@ function CryptoTracker() {
             <Line data={chartData} />
           </div>
         )}
+
       </div>
+     
+   
+   
     </div>
   );
 }
