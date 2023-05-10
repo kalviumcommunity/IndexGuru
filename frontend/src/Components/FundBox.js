@@ -2,7 +2,7 @@ import "../App.css";
 import { useState } from "react";
 import Spline from '@splinetool/react-spline';
 import TradingViewWidget from "./Graph";
-
+import Rating from '@mui/material/Rating';
 
 export default function FundBox(props) {
   const { fundItem } = props;
@@ -52,29 +52,34 @@ export default function FundBox(props) {
           </div>
         ) : (
           <div className="card-div">
-            <h1>{fundItem.name}</h1>
+            <h1 >{fundItem.name}</h1>
             <div className="NAV">
-              <h2 style={{"color": "#888"}}>Net Asset Value</h2>
-              <div> <span className="current_nav" style={{"fontWeight": 600}}> ₹{fundItem.current_nav}</span> </div>
-            
+              <h2 style={{"color": "#888"}}>Current NAV</h2>
+              <div> <span className="current_nav" style={{"fontWeight": 600}}> ₹{fundItem.current_nav}</span> <span>{
+                fundItem.one_day_return>0? <span style={{"color": "#10b983"}}> +{fundItem.one_day_return}</span>: <span style={{"color": "red"}}>{fundItem.one_day_return}</span>
+                }</span> </div>
+                <div> <Rating name="read-only" value={fundItem.rating} defaultValue={0}  size="large"  readOnly/> </div>
                </div>
 
-               <div className="short_name"><span>{fundItem.short_name}</span>
-               <div> <span>{fundItem.category}</span> </div>
-               <div> <span>{fundItem.sub_category}</span> </div>
-               <div> <span>{fundItem.scheme_plan}</span> </div>
+               <div className="short_name" ><h1 style={{"color": "#888"}}>{fundItem.short_name}</h1>
+               <div className="fund_details"> <span className="fund_stats">Category: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.category}</h2> </div>
+               <div className="fund_details"> <span className="fund_stats">Sub-Category: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.sub_category}</h2> </div>
+               <div className="fund_details"> <span className="fund_stats">Scheme Plan: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.scheme_plan} </h2></div>
                </div>
 
 
                <div className="return_values">
-                <div> {fundItem.one_year_return}</div>
-                <div>{fundItem.three_year_return}</div>
-                <div>{fundItem.one_day_return}</div>
-                <div>{fundItem.ter}</div>
+
+                <div className="fund_returns"> <span>One Year Return: </span> <span>{fundItem.one_year_return}</span></div>
+                <div className="fund_returns"> <span>Three Year Return: </span> <span>{fundItem.three_year_return}</span></div>
+                <div className="fund_returns"> <span>One Day Return</span> <span>{fundItem.one_day_return}</span></div>
+                <div className="fund_returns"> <span>TER</span> <span>{fundItem.ter}%</span></div>
+
+                </div>
 
 
                 
-                 </div>
+                
                
 
               
