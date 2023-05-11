@@ -52,28 +52,34 @@ export default function FundBox(props) {
           </div>
         ) : (
           <div className="card-div">
-            <h1 >{fundItem.name}</h1>
+            <div className="fund_details_graph">
+            <h1 style={{"marginLeft": 85, "marginTop":25}}>{fundItem.name}</h1>
             <div className="NAV">
-              <h2 style={{"color": "#888"}}>Current NAV</h2>
-              <div> <span className="current_nav" style={{"fontWeight": 600}}> ₹{fundItem.current_nav}</span> <span>{
+              <h2 style={{"color": "#888", "fontSize": "3rem"}}>Current NAV</h2>
+              <div> <span className="current_nav" style={{"fontWeight": 600,  "fontSize": "1.8rem"}}> ₹{fundItem.current_nav}</span> <span>{
                 fundItem.one_day_return>0? <span style={{"color": "#10b983"}}> +{fundItem.one_day_return}</span>: <span style={{"color": "red"}}>{fundItem.one_day_return}</span>
                 }</span> </div>
                 <div> <Rating name="read-only" value={fundItem.rating} defaultValue={0}  size="large"  readOnly/> </div>
                </div>
 
-               <div className="short_name" ><h1 style={{"color": "#888"}}>{fundItem.short_name}</h1>
+               <div className="short_name" ><h1 style={{"color": "#888", "textAlign":"center"}}>{fundItem.short_name}</h1>
                <div className="fund_details"> <span className="fund_stats">Category: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.category}</h2> </div>
                <div className="fund_details"> <span className="fund_stats">Sub-Category: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.sub_category}</h2> </div>
                <div className="fund_details"> <span className="fund_stats">Scheme Plan: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.scheme_plan} </h2></div>
-               </div>
+             
 
 
-               <div className="return_values">
+               
 
-                <div className="fund_returns"> <span>One Year Return: </span> <span>{fundItem.one_year_return}</span></div>
-                <div className="fund_returns"> <span>Three Year Return: </span> <span>{fundItem.three_year_return}</span></div>
-                <div className="fund_returns"> <span>One Day Return</span> <span>{fundItem.one_day_return}</span></div>
-                <div className="fund_returns"> <span>TER</span> <span>{fundItem.ter}%</span></div>
+                <div className="fund_returns"> <span className="return_parameters">One Year Return: </span> <span className="return_per">{fundItem.one_year_return}</span></div>
+                <div className="fund_returns"> <span className="return_parameters">Three Year Return: </span> <span className="return_per">{fundItem.three_year_return}</span></div>
+                <div className="fund_returns"> <span className="return_parameters">One Day Return:</span> <span  className="return_per">{fundItem.one_day_return}</span></div>
+                <div className="fund_returns"> <span className="return_parameters">Total Expense Ratio:</span> <span className="return_per">{fundItem.ter}%</span></div>
+                </div>
+                </div>
+
+                <div className="graph_div">
+                <TradingViewWidget/>
 
                 </div>
 
@@ -89,7 +95,7 @@ export default function FundBox(props) {
 
           {/* Graph */}
 
-        <TradingViewWidget/>
+    
        
         {/* The investments div start here  */}
     
@@ -157,25 +163,3 @@ export default function FundBox(props) {
     </>
   );
 }
-
-
-
-{/* <div className="flex-div">  
-<div>
-  <h1 className="fund-name">
-   {fundItem.name}
-  </h1>
-</div>
-<div className="fund-stats short_name"><span className="stats-topics">Short Name</span>  <span className="stats-value"> {fundItem.short_name}</span></div>
-<div className="fund-stats category"> <span className="stats-topics">Category </span> <span className="stats-value">{fundItem.category}</span></div>
-<div className="fund-stats sub_category"><span className="stats-topics">Sub Category</span>  <span className="stats-value">{fundItem.sub_category}</span></div>
-
-<div className="fund-stats scheme_plan"> <span className="stats-topics">Scheme Plan</span>  <span className="stats-value">{fundItem.scheme_plan}</span></div>
-<div className="fund-stats current_nav"> <span className="stats-topics">Net Asset Value</span>  <span className="stats-value">{fundItem.current_nav}</span></div>
-<div className="fund-stats one_year_return"><span className="stats-topics">One Year Return</span>  <span className="stats-value">{fundItem.one_year_return}</span></div>
-<div className="fund-stats three_year_return"><span className="stats-topics">Three Year Return</span>  <span className="stats-value"> {fundItem.three_year_return}</span></div>
-<div className="fund-stats rating"><span className="stats-topics">Rating </span>  <span className="stats-value">{fundItem.rating}</span></div>
-<div className="fund-stats ter"><span className="stats-topics">TER</span>  <span className="stats-value">{fundItem.ter}</span></div>
-
-
-  </div> */}

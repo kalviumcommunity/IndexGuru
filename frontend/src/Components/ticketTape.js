@@ -78,7 +78,7 @@ const TicketViewWidget = () => {
         },
         ],
         showSymbolLogo: true,
-        colorTheme: "dark",
+        colorTheme: "light",
         isTransparent: false,
         displayMode: "adaptive",
         locale: "en",

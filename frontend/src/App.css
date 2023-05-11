@@ -10,14 +10,27 @@
 /*Fundbox*/
 
 .card-div{
-  height: 90vh;
-  border: 1px solid red;
+  height: 95vh;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
 }
+.fund_details_graph{
+
+  width: 50%;
+  height: 100%;
+}
+
+
 .NAV{
   height: 20vh;
-  border: 1px solid black;
-  width: 20%;
-  margin: 5rem;
+
+  width: 50%;
+  margin-left: 5em;
+  margin-top: 3em;
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -30,37 +43,42 @@
 }
 
 .fund_stats{
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  text-align: left;
 }
 
 
 .short_name{
-  height: 25vh;
-  border: 1px solid black;
-  width: 20%;
-  margin: 5rem;
+  height: 60vh;
+  width: 50%;
+  padding: 25px;
+  margin-left: 6em;
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
-  text-align: center;
+ 
+  
+  
 }
 .fund_details{
+ 
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border: 1px solid red;
+  justify-content:space-between;
+  padding: 8px;
   width: 100%;
   color: black;
 
 }
 
 .return_values{
-  height: 15vh;
-  border: 1px solid black;
+  height: 20vh;
+  
   width: 20%;
-  margin: 5rem;
+  margin-left: 6em;
+  margin-top: 2em;
 }
 
 
@@ -76,7 +94,7 @@
 
 }
 .return_values{
-  border: 1px solid red;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,11 +102,23 @@
 }
 
 .fund_returns{
-  border: 1px solid purple;
+
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+.return_parameters{
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+}
+.return_per{
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #2196f3;
 }
 
 
@@ -281,12 +311,12 @@
 /*Tickets*/
 
 .tradingview-widget-container{
-  height: 80vh;
-  width: 60vw;
-  margin: auto;
+  height: 90vh;
+  width: 55vw;
+
 }
 #tradingview_6b9c4{
-  height: 80%;
+  height: 100%;
 }
 
 .search-results p {

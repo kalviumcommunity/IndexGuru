@@ -3,18 +3,18 @@ import axios from "axios";
 import "./CryptoTracker.css";
 import { Input } from "@chakra-ui/react";
 import { Spinner } from "@chakra-ui/react";
+import TicketViewWidget from "./ticketTape";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { registerables } from "chart.js";
-import TicketViewWidget from "./ticketTape";
 
 function CryptoTracker() {
   const [cryptoData, setCryptoData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(10); // Number of items to display per page
-  const [selectedCrypto, setSelectedCrypto] = useState(null);
+  const [itemsPerPage] = useState(12); // Number of items to display per page
+  const [selectedCrypto, setSelectedCrypto] = useState("bitcoin");
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
@@ -43,7 +43,8 @@ function CryptoTracker() {
     const fetchChartData = async () => {
       try {
         const response = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/${selectedCrypto}/market_chart?vs_currency=usd&days=30&interval=daily`,{crossDomain:true}
+          `https://api.coingecko.com/api/v3/coins/${selectedCrypto}/market_chart?vs_currency=usd&days=30&interval=daily`,
+          { crossDomain: true }
         );
         const chartData = {
           labels: response.data.prices.map((data) =>
@@ -93,15 +94,29 @@ function CryptoTracker() {
   );
 
   return (
+    <>
+     <TicketViewWidget />
+       <h1 className="future">Invest in the future with IndexGuru</h1>
+         {selectedCrypto && chartData && (
+          <div className="chart">
+            <Line data={chartData} className="chart_data" />
+          </div>
+        )}
     <div className="cryptoContainer">
-      <h1 className="future">Invest in the future with IndexGuru</h1>
-      <TicketViewWidget/>
+   
+  
+     
+  
+      
+   
+   
+  
       <div className="container">
         <div className="search-bar-holder">
           <Input
             color="tomato"
             placeholder="Cryptos at your fingertips..."
-            _placeholder={{ opacity: 1, color: "tomato" }}
+            _placeholder={{ opacity: 1}}
             onChange={handleSearch}
             className="search2"
           />
@@ -109,99 +124,79 @@ function CryptoTracker() {
         {isLoading ? (
           <div className="spinner">
             <Spinner
-              thickness="100"
-              speed="0.65s"
-              emptyColor="gray.200"
-              color="tomato"
+              thickness="10"
+              emptyColor="black"
+              speed="0.85s"
+              color="red"
               size="xl"
+              height={65}
+              width={65}
             />
           </div>
         ) : (
-          <div className="cryptoList">
-            <table>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Symbol</th>
-                  <th>Price</th>
-                  <th>24h %</th>
-                  <th>Market Cap</th>
-                  <th>Volume</th>
-                </tr>
-              </thead>
-              <tbody>
-                {currentItems.map((item) => (
-                  <tr
-                    key={item.id}
-                    onClick={() => handleCryptoClick(item.id)}
-                    className="cryptoItem"
-                  >
-                    <td>{item.name}</td>
-                    <td>{item.symbol.toUpperCase()}</td>
-                    <td>{item.current_price.toLocaleString()} USD</td>
-                    <td
+          <>
+            <ul className="crypto-list">
+            <div className="crypto_Grid">
+              {currentItems.map((item) => (
+                
+                <li
+                  key={item.id}
+                  className="crypto-item"
+                  onClick={() => handleCryptoClick(item.id)}
+                >
+                  <div className="crypto-item-symbol">
+                    <img
+                      src={item.image}
+                      alt={`${item.name} logo`}
+                      width="20"
+                      height="20"
+                    />
+                    {item.symbol.toUpperCase()}
+                  </div>
+                  <div className="crypto-item-details">
+                    <div className="crypto-item-name">{item.name}</div>
+                    <div className="crypto-item-price">
+                      Price: ${item.current_price.toLocaleString()}
+                    </div>
+                    <div
                       className={
-                        item.price_change_percentage_24h < 0
-                          ? "negative"
-                          : "positive"
+                        item.price_change_percentage_24h > 0
+                          ? "crypto-item-change positive"
+                          : "crypto-item-change negative"
                       }
                     >
-                      {item.price_change_percentage_24h.toFixed(2)}%
-                    </td>
-                    <td>{item.market_cap.toLocaleString()} USD</td>
-                    <td>{item.total_volume.toLocaleString()} USD</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div className="pagination">
-              {filteredCryptoData.length > 0 && (
-                <div>
-                  <button
-                    onClick={() =>
-                      setCurrentPage((currentPage) =>
-                        currentPage === 1 ? 1 : currentPage - 1
-                      )
-                    }
-                    disabled={currentPage === 1}
-                  >
-                    Prev
-                  </button>
-                 
-               
-                  <button
-                    onClick={() =>
-                      setCurrentPage((currentPage) =>
-                        currentPage ===
-                        Math.ceil(filteredCryptoData.length / itemsPerPage)
-                          ? currentPage
-                          : currentPage + 1
-                      )
-                    }
-                    disabled={
-                      currentPage ===
-                      Math.ceil(filteredCryptoData.length / itemsPerPage)
-                    }
-                  >
-                    Next
-                  </button>
+                      24h Change: {item.price_change_percentage_24h.toFixed(2)}%
+                    </div>
+                    <div className="crypto-item-market-cap">
+                      Market Cap: ${item.market_cap.toLocaleString()}
+                    </div>
+                  </div>
+                </li>
+              
+              ))}
                 </div>
-              )}
+            </ul>
+            <div className="pagination">
+              <button
+                onClick={() => paginate(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              <button
+                onClick={() => paginate(currentPage + 1)}
+                disabled={indexOfLastItem >= filteredCryptoData.length}
+              >
+                Next
+              </button>
             </div>
-          </div>
+          </>
         )}
-        {selectedCrypto && chartData && (
-          <div className="chart">
-            <Line data={chartData} />
-          </div>
-        )}
-
       </div>
-     
-   
-   
     </div>
+    </>
   );
+  
 }
 
 export default CryptoTracker;

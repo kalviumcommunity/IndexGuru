@@ -1,16 +1,18 @@
- @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
-.cryptoContainer{
-  /* background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);   */
-}
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
 
 .container {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
-
+  /* border: 1px solid red; */
+}
+.chart {
+  height: 50vh;
+  width: 60%;
+  margin-left: 450px;
 }
 
-.spinner{
+.spinner {
   width: 50%;
   height: 100vh;
   margin: 0 auto;
@@ -19,22 +21,36 @@
   justify-content: center;
 }
 
-
 .crypto-list {
   list-style-type: none;
-  padding: 0;
-  margin-top: 50px;
+  /* border: 1px solid purple; */
+  height: 80%;
 }
 
 .crypto-item {
+  width: 60%;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 10px;
   padding: 10px;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 .crypto-item:hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 20px 20px 0px rgb(48, 48, 48);
+  cursor: pointer;
+}
+
+.crypto_Grid {
+  display: grid;
+  column-gap: 6em;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+}
+
+.crypto-item:hover {
   border: 1px solid #ffb711;
 }
 
@@ -56,7 +72,6 @@
   font-weight: bold;
   margin-bottom: 5px;
 }
-
 
 .crypto-item-price {
   font-size: 16px;
@@ -80,10 +95,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-} 
+}
 
 .pagination button {
-
   padding: 5px 10px;
   height: 40px;
   width: 80px;
@@ -112,7 +126,7 @@
   width: 100%;
   font-size: 70px;
   padding: 15px;
- color: #0879dc;
+  color: #0879dc;
   font-weight: 600;
   letter-spacing: 1px;
   font-family: "Lora", serif;
@@ -160,9 +174,8 @@
     padding: 15px;
     color: #0879dc;
     font-weight: 600;
-   
+
     font-family: "Lora", serif;
     text-transform: none;
-    
   }
 }
