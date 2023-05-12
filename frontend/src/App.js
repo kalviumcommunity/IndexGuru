@@ -5,18 +5,20 @@ import { Route, Routes } from "react-router-dom";
 import Explore from "./Components/Explore";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import CryptoExplore from "./Components/CryptoExplore";
 
 function App() {
   return (
     <>
-  <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/crypto" element={<CryptoTracker />} />
-      <Route path = "/explore" element={<Explore/>}/>
-    </Routes>
-    <Footer/>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/crypto" element={<CryptoTracker />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/explorecrypto" element={<CryptoExplore />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

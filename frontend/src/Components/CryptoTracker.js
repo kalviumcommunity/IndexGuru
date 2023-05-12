@@ -8,6 +8,7 @@ import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { registerables } from "chart.js";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function CryptoTracker() {
   const [cryptoData, setCryptoData] = useState([]);
@@ -189,6 +190,7 @@ function CryptoTracker() {
           )}
         </div>
         <div className="explore_div">
+          <Link to={"/explorecrypto"}>
           <button className="explore_button">
             <span> </span>
             <span> </span>
@@ -196,6 +198,7 @@ function CryptoTracker() {
             <span> </span>
            <div className="arr"> Explore More <FaArrowRight/> </div>
           </button>
+          </Link>
         </div>
       </div>
     </>
