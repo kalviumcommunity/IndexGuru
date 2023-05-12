@@ -336,6 +336,43 @@
 .search-results p:active {
   transform: translateY(1px);
 }
+/*CryptoWidget*/
+.tradingview-widget-container{
+  width: 100%;
+  margin-top: 45px;
+  padding: 50px ;
+  margin-bottom: 15px;
+  height: fit-content;
+
+}
+.tradingview-widget-container__widget{
+  margin-top: 30px;
+  width: 70%;
+  margin-left: 120px;
+}
+.marketCap{
+
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tradingview-widget-container1{
+  width: 100%;
+  padding: 50px ;
+  height: fit-content;
+
+}
+#tradingview_5feea{
+
+  width: 80%;
+  margin-left: 120px;
+}
+
+
+
+
 /*Responsiveness*/
 
 
