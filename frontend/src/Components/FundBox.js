@@ -1,8 +1,12 @@
 import "../App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Spline from '@splinetool/react-spline';
 import TradingViewWidget from "./Graph";
 import Rating from '@mui/material/Rating';
+import Chart from "chart.js/auto";
+import { registerables } from "chart.js";
+import { Line } from 'react-chartjs-2';
+
 
 export default function FundBox(props) {
   const { fundItem } = props;
@@ -12,6 +16,69 @@ export default function FundBox(props) {
     three_year: 0,
     one_day: 0,
   });
+
+
+  /*Graph Code*/
+
+  const [navData, setNavData] = useState([]);
+
+  useEffect(() => {
+    const fetchNavData = async () => {
+      const response = await fetch('https://api.kuvera.in/mf/api/v6/fund_navs/8184-GR.json?v=1.211.0');
+      const data = await response.json();
+      setNavData(data.slice(-30));
+    };
+    fetchNavData();
+  }, []);
+
+  const navValues = navData.map((dataPoint) => dataPoint[1]);
+
+  const daysToShow = 30;
+  const dateLabels = Array.from({ length: daysToShow }, (_, i) => {
+    const date = new Date();
+    date.setDate(date.getDate() - (daysToShow - i - 1));
+    return date.toLocaleDateString();
+  });
+
+  const chartData = {
+    labels: dateLabels,
+    datasets: [
+      {
+        label: 'NAV',
+        data: navValues,
+        borderColor: 'blue',
+        fill: false,
+      },
+    ],
+  };
+
+  const options = {
+    maintainAspectRatio: false,
+    responsive: true,
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'NAV',
+            fontSize: 20
+          },
+        },
+      ],
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+      },
+    },
+    width: 600,
+    height: 800,
+  };
+  
+
+
+  
 
   const calculateCompoundInterest = () => {
     const p = parseFloat(input);
@@ -79,8 +146,15 @@ export default function FundBox(props) {
                 </div>
 
                 <div className="graph_div">
-                <TradingViewWidget/>
+                {/* <TradingViewWidget/> */}
+                <Line
+                 data={chartData} 
+                 options={options}
+                  className="fund_graph"
+                  width="1000"
+                  height="500"
 
+                   />
                 </div>
 
 
@@ -93,7 +167,7 @@ export default function FundBox(props) {
             </div>
         )}
 
-          {/* Graph */}
+          
 
     
        
