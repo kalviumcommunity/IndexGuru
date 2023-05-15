@@ -55,8 +55,8 @@
 
 .short_name{
   height: 60vh;
-  width: 50%;
-  padding: 25px;
+  width: 70%;
+  padding: 20px;
   margin-left: 6em;
   margin-top: 2em;
   display: flex;
@@ -301,14 +301,32 @@
 .search-results {
   position: absolute;
   right: 51%;
-  top: 45%;
-  height: 30vh;
+  top: 46%;
+  height: 25vh;
   z-index: 1;
   font-size: 1.1rem;
   font-weight: 800;
   overflow: hidden;
   overflow-y: auto;
-  background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9);
+}
+/* Style the scrollbar */
+.search-results::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background-color: #2196f3;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background-color: #0063aa;
 }
 
 
