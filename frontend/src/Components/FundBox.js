@@ -21,15 +21,17 @@ export default function FundBox(props) {
   /*Graph Code*/
 
   const [navData, setNavData] = useState([]);
-
   useEffect(() => {
-    const fetchNavData = async () => {
-      const response = await fetch('https://api.kuvera.in/mf/api/v6/fund_navs/8184-GR.json?v=1.211.0');
-      const data = await response.json();
-      setNavData(data.slice(-30));
-    };
-    fetchNavData();
-  }, []);
+    if (fundItem && fundItem.unique_fund_code) {
+      const fetchNavData = async () => {
+        const response = await fetch(`https://api.kuvera.in/mf/api/v6/fund_navs/${fundItem.unique_fund_code}.json?v=1.211.0`);
+        const data = await response.json();
+        setNavData(data.slice(-30));
+      };
+      fetchNavData();
+    }
+  }, [fundItem]);
+  
 
   const navValues = navData.map((dataPoint) => dataPoint[1]);
 
@@ -46,7 +48,6 @@ export default function FundBox(props) {
       {
         label: 'NAV',
         data: navValues,
-        borderColor: 'blue',
         fill: false,
       },
     ],
@@ -61,7 +62,7 @@ export default function FundBox(props) {
           scaleLabel: {
             display: true,
             labelString: 'NAV',
-            fontSize: 20
+            fontSize: 40,
           },
         },
       ],
@@ -70,6 +71,7 @@ export default function FundBox(props) {
       legend: {
         display: true,
         position: 'top',
+      
       },
     },
     width: 600,
