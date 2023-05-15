@@ -18,12 +18,16 @@
   
 
 }
-.fund_details_graph{
 
-  width: 50%;
-  height: 100%;
+.graph_div{
+  width: 50%; 
+  height: 100%; 
+  /* border: 1px solid red; */
 }
+.fund_graph{
+  /* border: 2px solid black; */
 
+}
 
 .NAV{
   height: 20vh;
@@ -310,9 +314,10 @@
 
 /*Tickets*/
 
-.tradingview-widget-container{
-  height: 90vh;
-  width: 55vw;
+.tradingview-widget-container2{
+  height: 94vh;
+  width: 48vw;
+  margin-top: 25px;
 
 }
 #tradingview_6b9c4{
@@ -337,9 +342,10 @@
   transform: translateY(1px);
 }
 /*CryptoWidget*/
+
 .tradingview-widget-container{
   width: 100%;
-  margin-top: 45px;
+  margin-top: 5px;
   padding: 50px ;
   margin-bottom: 15px;
   height: fit-content;

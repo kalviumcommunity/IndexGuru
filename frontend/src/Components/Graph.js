@@ -49,11 +49,8 @@ export default function TicketViewWidget() {
   );
 
   return (
-    <div className='tradingview-widget-container'>
+    <div className='tradingview-widget-container2'>
       <div id='tradingview_6b9c4' />
-      <div className="tradingview-widget-copyright">
-        <a href="https://in.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span className="blue-text">AAPL stock chart</span></a> by TradingView
-      </div>
     </div>
   );
 }

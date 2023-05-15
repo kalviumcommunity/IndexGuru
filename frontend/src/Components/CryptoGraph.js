@@ -52,9 +52,6 @@ export default function CryptoGraph() {
   return (
     <div className='tradingview-widget-container1'>
       <div id='tradingview_5feea' />
-      <div className="tradingview-widget-copyright">
-        <a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="blue-text">Track all markets</span></a> on TradingView
-      </div>
     </div>
   );
 }
