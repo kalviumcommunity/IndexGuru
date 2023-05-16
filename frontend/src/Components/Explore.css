@@ -26,20 +26,29 @@
 
 }
 .sub-buttons{
-    background-color: #004e92;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
     border-radius: 10px;
     width: 12vw;
     height: 55px;
     text-align: center;
     font-size: 1.1rem;
-    color: #fff; 
+    color: #2196f3; 
     margin: 5px;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
+}
+.sub-buttons:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.57);
 }
 .explore-table{
-  margin-top: 10px;
+    /* border: 1px solid red; */
+    border: none;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +68,22 @@
 }
 .search3{
     margin-top: 20px;
+    margin-bottom: 45px;
+
 }
+.table_heads{
+
+    font-size: 2rem;
+    color: red;
+}
+.TableContainer{
+    padding: 10px ;
+    margin-top: 50px;
+}
+
+
+
+
 /* For screens with a width of 768px or less */
 @media (max-width: 768px) {
     .sub-buttons{

@@ -46,9 +46,13 @@ export default function FundBox(props) {
     labels: dateLabels,
     datasets: [
       {
-        label: 'NAV',
+        label: fundItem ? fundItem.name : 'NAV',
+  
         data: navValues,
         fill: false,
+        radius: 5,
+        pointBackgroundColor: "white",
+        
       },
     ],
   };
@@ -63,6 +67,7 @@ export default function FundBox(props) {
             display: true,
             labelString: 'NAV',
             fontSize: 40,
+         
           },
         },
       ],
