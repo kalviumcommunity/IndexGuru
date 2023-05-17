@@ -1,8 +1,11 @@
-
+.abc{
+    padding: 45px;
+}
 
 .explorer-container{
     height: max-content;
-    border-bottom: 1px solid #004e92;
+
+
 }
 .targets{
     display: flex;
@@ -67,8 +70,16 @@
 
 }
 .search3{
-    margin-top: 20px;
     margin-bottom: 45px;
+    width: 15%;
+}
+.search3_container{
+
+    display: flex;
+    margin-top: 35px;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
 
 }
 .table_heads{
