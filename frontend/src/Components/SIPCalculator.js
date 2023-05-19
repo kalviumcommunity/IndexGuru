@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TextField, Typography, Slider } from "@mui/material";
 import { Doughnut } from "react-chartjs-2";
 import "./SIPCalculator.css";
+import { numberToWords } from "number-to-words";
 
 const SIPCalculator = () => {
   const [monthlyInvestment, setMonthlyInvestment] = useState(0);
@@ -60,9 +61,18 @@ const SIPCalculator = () => {
           monthlyInvestment * investmentPeriod * 12,
           futureValue - monthlyInvestment * investmentPeriod * 12,
         ],
-        backgroundColor: ["#66BB6A", "#42A5F5"],
+        backgroundColor: ["#10b983", "#42A5F5"],
       },
     ],
+  };
+
+  const convertCurrencyToWords = (amount) => {
+    const rupees = Math.floor(amount);
+    const paise = Math.round((amount - rupees) * 100);
+    const rupeesInWords = numberToWords.toWords(rupees);
+    const paiseInWords = numberToWords.toWords(paise);
+    const currencyInWords = `${rupeesInWords} rupees and ${paiseInWords} paise`;
+    return { amount: formatCurrency(amount), words: currencyInWords };
   };
 
   return (
@@ -122,10 +132,7 @@ const SIPCalculator = () => {
               max={30}
               step={1}
             />
-
-         
           </div>
-
         </div>
         <div className="graph_div">
           {inputFilled && (
@@ -133,13 +140,16 @@ const SIPCalculator = () => {
               <Doughnut data={chartData} />
             </div>
           )}
-          
         </div>
         <div className="total_return">
-          <Typography variant="h6" align="center">
-              Future Value:  {formatCurrency(futureValue)}
+          
+            <Typography variant="h6" align="center">
+            <span style={{color: "#888"}} >Future Value:</span>   <span style={{color: "#10b983"}}> {convertCurrencyToWords(futureValue).amount}</span>
             </Typography>
-            </div>
+            <Typography variant="subtitle1" align="center">
+              {convertCurrencyToWords(futureValue).words}
+            </Typography>
+        </div>
       </div>
     </div>
   );

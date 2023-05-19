@@ -43,5 +43,8 @@
 .total_return{
     /* border: 2px solid blue; */
     width: fit-content;
-    height: fit-content;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
