@@ -187,7 +187,7 @@
   background-color: transparent;
 	position: relative;
   border: none;
-	padding: 6px 2px;
+	padding: 1px 3px;
 	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 	color: #0879dc;
 	text-decoration: none;
@@ -209,7 +209,7 @@
 .arr{
 
   width: 100%;
-  height: 60px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

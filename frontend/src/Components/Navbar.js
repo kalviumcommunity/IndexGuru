@@ -9,8 +9,6 @@ import { FaFeatherAlt } from "react-icons/fa";
 
 
 
-
-
 export default function Navbar() {
 
   const handleDownload = () => {
@@ -23,9 +21,6 @@ export default function Navbar() {
   };
   
 
-
-
-
   return (
     <>
       <header className="header">
@@ -37,12 +32,22 @@ export default function Navbar() {
          
           <div className="links">
             <Link to="/crypto">
-              <button className="buttons">Crypto</button>
+              <button className="buttons">Explore Crypto</button>
             </Link>
+
+            <Link to="/explorecrypto">
+            <button className="buttons">Crypto Insights </button>
+            </Link>
+
             
             <Link to="/explore">
-            <button className="buttons"> Explore<FaFeatherAlt/> </button>
+            <button className="buttons"> Explore Mutual Funds<FaFeatherAlt/> </button>
             </Link>
+
+            <Link to="/SIPCalculator">
+            <button className="buttons">SIP Calculator<FaFeatherAlt/> </button>
+            </Link>
+           
             <button id="guide" className="buttons" onClick={handleDownload} style={{textAlign:"center"}}>Investment Guide <FaDownload/></button>
 
             <LoginButton />
