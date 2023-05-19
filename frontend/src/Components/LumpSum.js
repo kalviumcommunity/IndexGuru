@@ -4,8 +4,8 @@ import { Doughnut } from "react-chartjs-2";
 import "./SIPCalculator.css";
 import { numberToWords } from "number-to-words";
 
-const SIPCalculator = () => {
-  const [monthlyInvestment, setMonthlyInvestment] = useState(0);
+const LumpsumCalculator = () => {
+  const [principalAmount, setPrincipalAmount] = useState(0);
   const [rateOfInterest, setRateOfInterest] = useState(0);
   const [investmentPeriod, setInvestmentPeriod] = useState(0);
   const [futureValue, setFutureValue] = useState(0);
@@ -13,7 +13,7 @@ const SIPCalculator = () => {
 
   useEffect(() => {
     if (
-      monthlyInvestment !== 0 &&
+      principalAmount !== 0 &&
       rateOfInterest !== 0 &&
       investmentPeriod !== 0
     ) {
@@ -22,15 +22,11 @@ const SIPCalculator = () => {
     } else {
       setInputFilled(false);
     }
-  }, [monthlyInvestment, rateOfInterest, investmentPeriod]);
+  }, [principalAmount, rateOfInterest, investmentPeriod]);
 
   const calculateFutureValue = () => {
-    const periodicRate = rateOfInterest / 100 / 12; // Convert the annual interest rate to monthly
-    const totalNumberOfPayments = investmentPeriod * 12; // Convert the investment period to months
     const futureVal =
-      monthlyInvestment *
-      ((Math.pow(1 + periodicRate, totalNumberOfPayments) - 1) / periodicRate) *
-      (1 + periodicRate);
+      principalAmount * Math.pow(1 + rateOfInterest / 100, investmentPeriod);
     setFutureValue(futureVal.toFixed(2)); // Rounded to 2 decimal places
   };
 
@@ -41,8 +37,8 @@ const SIPCalculator = () => {
     }).format(value);
   };
 
-  const handleMonthlyInvestmentChange = (event, newValue) => {
-    setMonthlyInvestment(newValue);
+  const handlePrincipalAmountChange = (event, newValue) => {
+    setPrincipalAmount(newValue);
   };
 
   const handleRateOfInterestChange = (event, newValue) => {
@@ -54,13 +50,10 @@ const SIPCalculator = () => {
   };
 
   const chartData = {
-    labels: ["Investment", "Interest"],
+    labels: ["Principal", "Interest"],
     datasets: [
       {
-        data: [
-          monthlyInvestment * investmentPeriod * 12,
-          futureValue - monthlyInvestment * investmentPeriod * 12,
-        ],
+        data: [principalAmount, futureValue - principalAmount],
         backgroundColor: ["#10b983", "#42A5F5"],
       },
     ],
@@ -82,17 +75,19 @@ const SIPCalculator = () => {
           <div>
             <TextField
               type="number"
-              label="Monthly Investment"
+              label="Principal Amount"
               variant="outlined"
               fullWidth
-              value={monthlyInvestment === 0 ? '' : monthlyInvestment}
-              onChange={(e) => setMonthlyInvestment(parseFloat(e.target.value))}
+              value={principalAmount}
+              onChange={(e) =>
+                setPrincipalAmount(parseFloat(e.target.value))
+              }
             />
             <Slider
-              value={monthlyInvestment}
-              onChange={handleMonthlyInvestmentChange}
+              value={principalAmount}
+              onChange={handlePrincipalAmountChange}
               valueLabelDisplay="auto"
-              min={500}
+              min={10000}
               max={10000000}
               step={500}
             />
@@ -103,56 +98,56 @@ const SIPCalculator = () => {
               label="Rate of Interest (%)"
               variant="outlined"
               fullWidth
-              value={rateOfInterest === 0 ? '' : rateOfInterest}
-              onChange={(e) => setRateOfInterest(parseFloat(e.target.value))}
+              value={rateOfInterest}
+              onChange={(e) =>
+                setRateOfInterest(parseFloat(e.target.value))
+              }
             />
             <Slider
               value={rateOfInterest}
               onChange={handleRateOfInterestChange}
-              valueLabelDisplay="auto"
-              min={0}
-              max={30}
-              step={0.5}
-            />
-          </div>
-          <div>
-            <TextField
-              type="number"
-              label="Investment Period (in years)"
-              variant="outlined"
-              fullWidth
-              value={investmentPeriod === 0 ? '' : investmentPeriod}
-              onChange={(e) => setInvestmentPeriod(parseFloat(e.target.value))}
-            />
+              valueLabelDisplay            />
             <Slider
               value={investmentPeriod}
               onChange={handleInvestmentPeriodChange}
               valueLabelDisplay="auto"
-              min={0}
+              min={1}
               max={30}
               step={1}
             />
           </div>
         </div>
-        <div className="graph_div1">
-          {inputFilled && (
-            <div className="dough">
+        <div className="graph_div">
+          <div className="dough">
+            {inputFilled ? (
               <Doughnut data={chartData} />
-            </div>
-          )}
-        </div>
-        <div className="total_return">
-          
+            ) : (
+              <Typography variant="body1" align="center">
+                Enter the investment details to see the chart.
+              </Typography>
+            )}
+          </div>
+          <div className="total_return">
             <Typography variant="h6" align="center">
-            <span style={{color: "#888"}} >Future Value:</span>   <span style={{color: "#10b983"}}> {convertCurrencyToWords(futureValue).amount}</span>
+              Total Return
             </Typography>
-            <Typography variant="subtitle1" align="center" className="text_currency">
-              {convertCurrencyToWords(futureValue).words}
-            </Typography>
+            {inputFilled && (
+              <Typography variant="h4" align="center">
+                {convertCurrencyToWords(futureValue).amount}
+              </Typography>
+            )}
+            {inputFilled && (
+              <Typography variant="subtitle1" align="center">
+                <div className="text_currency"> ({convertCurrencyToWords(futureValue).words})</div>
+               
+              </Typography>
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default SIPCalculator;
+export default LumpsumCalculator;
+

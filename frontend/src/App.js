@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import CryptoExplore from "./Components/CryptoExplore";
 import SIPCalculator from "./Components/SIPCalculator";
+import LumpsumCalculator from "./Components/LumpSum";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/explorecrypto" element={<CryptoExplore />} />
         <Route path="/SIPCalculator" element={<SIPCalculator />} />
+        <Route path="/LumpsumCalculator" element={<LumpsumCalculator />} />
       </Routes>
       <Footer />
     </>

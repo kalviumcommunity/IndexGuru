@@ -1,6 +1,6 @@
 
 import "./Navbar.css";
-import Logo from "../Components/assets/Logo3.png";
+import Logo from "../Components/assets/logo3.jpeg";
 import LoginButton from "./login";
 import { Link } from "react-router-dom";
 import docsPDF from "./assets/Investment Guide.pdf"
@@ -45,7 +45,12 @@ export default function Navbar() {
             </Link>
 
             <Link to="/SIPCalculator">
-            <button className="buttons">SIP Calculator<FaFeatherAlt/> </button>
+            <button className="buttons">SIP Calculator </button>
+            </Link>
+
+            
+            <Link to="/LumpsumCalculator">
+            <button className="buttons">Lumpsun Calculator</button>
             </Link>
            
             <button id="guide" className="buttons" onClick={handleDownload} style={{textAlign:"center"}}>Investment Guide <FaDownload/></button>

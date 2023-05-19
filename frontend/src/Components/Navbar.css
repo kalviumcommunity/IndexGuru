@@ -7,16 +7,15 @@
 }
 
 .logo_container {
-  margin: auto;
 }
 .logo{
-  height: 9vh;
+  height: 5em;
 }
 .Navbar {
   margin-top: 15px;
   height: 10vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -136,7 +135,7 @@
   .Navbar {
     height: auto;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
   .links {
