@@ -6,6 +6,7 @@ import Explore from "./Components/Explore";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import CryptoExplore from "./Components/CryptoExplore";
+import SIPCalculator from "./Components/SIPCalculator";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/crypto" element={<CryptoTracker />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/explorecrypto" element={<CryptoExplore />} />
+        <Route path="/SIPCalculator" element={<SIPCalculator />} />
       </Routes>
       <Footer />
     </>
