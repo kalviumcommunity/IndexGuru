@@ -1,0 +1,47 @@
+.main_div{
+    /* border: 2px solid red; */
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 10px;
+}
+.second_div{
+    /* border: 2px solid black; */
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.textField{
+    /* border: 2px solid purple; */
+    width: 40%;
+    height: 70vh;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.graph_div{
+    padding: 5px;
+    /* border: 2px solid goldenrod; */
+    width: 30vw;
+    height: 80%;
+}
+.dough{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.total_return{
+    /* border: 2px solid blue; */
+    width: fit-content;
+    height: fit-content;
+}
