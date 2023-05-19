@@ -30,8 +30,8 @@ export default function Navbar() {
     <>
       <header className="header">
         <div className="Navbar">
-          <Link to="/" className="logo">
-          <img src={Logo}  alt="This is my logo" />
+          <Link to="/" className="logo_container">
+          <img className="logo" src={Logo}  alt="This is my logo" />
           </Link>
 
          
@@ -43,7 +43,7 @@ export default function Navbar() {
             <Link to="/explore">
             <button className="buttons"> Explore<FaFeatherAlt/> </button>
             </Link>
-            <button className="buttons" onClick={handleDownload} style={{textAlign:"center"}}>Investment Guide <FaDownload/></button>
+            <button id="guide" className="buttons" onClick={handleDownload} style={{textAlign:"center"}}>Investment Guide <FaDownload/></button>
 
             <LoginButton />
           </div>

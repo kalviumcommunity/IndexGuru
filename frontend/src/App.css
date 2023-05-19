@@ -10,31 +10,30 @@
 /*Fundbox*/
 
 .card-div{
-  height: 95vh;
+  height: fit-content;
   padding-right: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
-  
+
 
 }
 
 .graph_div{
-  width: 50%; 
-  height: 100%; 
-  /* border: 1px solid red; */
+  width: 50vw; 
+  height: 105vh; 
+
 }
 .fund_graph{
-  /* border: 2px solid black; */
+  margin-left: 25px;
 
 }
 
 .NAV{
   height: 20vh;
-
   width: 50%;
-  margin-left: 5em;
+  margin-left: 8em;
   margin-top: 3em;
   font-size: 1.2rem;
   display: flex;
@@ -48,7 +47,7 @@
 }
 
 .fund_stats{
-  font-size: 1.3rem;
+  font-size: 1em;
   font-weight: bold;
   text-align: left;
 }
@@ -116,13 +115,13 @@
 }
 .return_parameters{
   color: black;
-  font-size: 1.3rem;
+  font-size: 1em;
   font-weight: bold;
 
 }
 .return_per{
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #2196f3;
 }
 
@@ -242,15 +241,20 @@
   height: 100%;
   width: 100%;
 }
+.spline_container{
+  margin: 1px solid  red;
+  height: 10vh;
+}
 
 /*FundBox End*/
 
 /*SearchBar*/
-.typewriter{
-  color: #004e92;
-  font-size: 2.4rem;
+#home_typer{
+  color: #2196f3;
+  font-size: x-large;
   font-family: 'Roboto Slab', serif;   
   font-weight: bolder;
+  margin-bottom: 25px;
 
 }
 
@@ -260,6 +264,8 @@
   align-items: center;
   padding: 20px;
   width: 100%;
+  margin-top: 15px;
+  /* border: 1px solid red; */
  
   /* background-image: linear-gradient(to right, #e2eefb 50%, #F2F5F9); */
 }
@@ -267,45 +273,67 @@
 .justSearch{
  
   height: 40vh;
+
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
+.search1_container{
+
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 .search-bar {
+  padding-right: 30px;
   height: 6vh;
-  width: 60%;
-  border-radius: 10px;
-  color: red;
+  width: 50%;
+  border-radius: 5px;
+  color: #0063aa;
+  font-family: 'Roboto Slab', serif;   
   text-align: center;
   font-size: 20px;
   outline: none;
   margin: auto;
-  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.search-icon {
+  position: absolute;
+  right: 15em; /* Adjust the positioning as needed */
+  top: 52%;
+  transform: translateY(-50%);
+  color: #999; /* Adjust the color of the search icon */
+  cursor: pointer;
 }
 
 .search-bar:focus{
-  outline: none;
-  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 32px 0 rgba(31, 38, 135, 0.57);
  
 }
 .search-bar::placeholder{
   color: #2196f3;
   text-align: center;
-  font-size: 20px;
-  font-family: "Lora", serif;
+  font-size: 15px;
 }
 .search-bar:focus::placeholder{
   color: transparent;
 }
 .search-results {
   position: absolute;
-  right: 51%;
-  top: 46%;
+  right: 50%;
+  top: 48%;
   height: 25vh;
   z-index: 1;
-  font-size: 1.1rem;
+  font-size: 1em;
   font-weight: 800;
   overflow: hidden;
   overflow-y: auto;
@@ -334,8 +362,8 @@
 /*Tickets*/
 
 .tradingview-widget-container2{
-  height: 94vh;
-  width: 48vw;
+  height: 50vh;
+  width: 40vw;
   margin-top: 25px;
 
 }
@@ -348,12 +376,12 @@
   width: 35vw;
   color: #2196f3;
   height: 5vh;
-  font-family: "Lora", serif;
+  font-family: 'Roboto Slab', serif; 
   padding: 18px;
 }
 .search-results p:hover {
   cursor: pointer;
-  color: #ffb711;
+  color: #0063aa;
   transition: 0.1s;
   border-bottom: 1px solid #ffb711;
 }
@@ -364,16 +392,17 @@
 
 .tradingview-widget-container{
   width: 100%;
-  margin-top: 5px;
   padding: 50px ;
   margin-bottom: 15px;
   height: fit-content;
 
+  height: 75vh;
+
 }
 .tradingview-widget-container__widget{
-  margin-top: 30px;
-  width: 70%;
-  margin-left: 120px;
+  width: fit-content;
+
+  margin: 0 auto;
 }
 .marketCap{
 
@@ -384,6 +413,7 @@
   justify-content: center;
 }
 .tradingview-widget-container1{
+  margin-left: 15px;
   width: 100%;
   padding: 50px ;
   height: fit-content;
@@ -392,7 +422,6 @@
 #tradingview_5feea{
 
   width: 80%;
-  margin-left: 120px;
 }
 
 
@@ -424,19 +453,16 @@
   .search-bar::placeholder{
     font-size: 13px;
   }
-  .search-results {
+  /* .search-results2 {
     position: absolute;
     right: 32%;
-    top: 70%;
+    top: 150%;
     height: 35vh;
-    font-size: 13px;
-}
-.search-results p{
-  margin: 8px;
-}
-.typewriter{
-  color: #004e92;
-  font-size: 14px;
+    font-size: x-small;
+} */
+#home_typer{
+  color: #10b983;
+  font-size: 50px;
   font-family: 'Roboto Slab', serif;   
   font-weight: bolder;
   margin-bottom: 25px;

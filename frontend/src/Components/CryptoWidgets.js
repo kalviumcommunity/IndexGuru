@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import "../App.css";
 
 const TradingViewScreener = () => {
+  const scriptRef = useRef(null);
+
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
-    script.async = true;
-    script.innerHTML = JSON.stringify({
-      "width": 1500,
-      "height": 690,
+    scriptRef.current = document.createElement('script');
+    scriptRef.current.src = 'https://s3.tradingview.com/external-embedding/embed-widget-screener.js';
+    scriptRef.current.async = true;
+    scriptRef.current.innerHTML = JSON.stringify({
+      "width": 1300,
+      "height": 500,
       "defaultColumn": "overview",
       "screener_type": "crypto_mkt",
       "displayCurrency": "USD",
@@ -17,10 +19,12 @@ const TradingViewScreener = () => {
     });
 
     const widgetContainer = document.getElementsByClassName('tradingview-widget-container__widget')[0];
-    widgetContainer.appendChild(script);
+    widgetContainer.appendChild(scriptRef.current);
 
     return () => {
-      widgetContainer.removeChild(script);
+      if (scriptRef.current) {
+        scriptRef.current.remove();
+      }
     };
   }, []);
 
