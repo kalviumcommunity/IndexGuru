@@ -30,7 +30,7 @@
 }
 
 .crypto-item {
-  width: 60%;
+  width: 65%;
   display: flex;
   justify-content: space-between;
   border: 1px solid #ddd;
@@ -39,6 +39,7 @@
   padding: 10px;
   margin-left: 100px;
   margin-top: 50px;
+  font-size: 15px;
 }
 .crypto-item:hover{
   transform: translateY(-3px);
@@ -48,8 +49,8 @@
 
 .crypto_Grid {
   display: grid;
-  column-gap: 6em;
-  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  column-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .crypto-item:hover {
@@ -95,15 +96,17 @@
 }
 
 .pagination {
+  margin-top: 7em;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
 }
 
 .pagination button {
   padding: 5px 10px;
-  height: 50px;
-  width: 95px;
+  height: 40px;
+  width: 75px;
   margin-top: 20px;
   margin-bottom: 20px;
   border: none;
@@ -111,7 +114,7 @@
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .pagination button:hover {
@@ -184,12 +187,12 @@
   background-color: transparent;
 	position: relative;
   border: none;
-	padding: 8px 5px;
+	padding: 6px 2px;
 	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 	color: #0879dc;
 	text-decoration: none;
 	letter-spacing: 4px;
-	font: 700 20px consolas;
+	font: 700 15px consolas;
 	overflow: hidden;
   margin-bottom: 25px;
   margin-left: 45px;

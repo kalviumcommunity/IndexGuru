@@ -4,6 +4,7 @@ import FundBox from "./FundBox";
 import Carousel from "./Carousel";
 import "../App.css";
 import Typewriter from "typewriter-effect";
+import { FaSearch } from "react-icons/fa";
 
 function SearchBar() {
   const [search, setSearch] = useState("");
@@ -40,6 +41,7 @@ function SearchBar() {
     <>
       <div className="search-carousel">
         <div className="justSearch">
+          <div className="search1_container">
           <input
             type="text"
             value={search}
@@ -47,8 +49,12 @@ function SearchBar() {
             placeholder="Click here to look for your funds..."
             onChange={handleChange}
           />
+          <div className="search-icon">
+          <FaSearch/>
+          </div>
+          </div>
           {showTypewriter && (
-            <span className="typewriter">
+            <span id="home_typer">
               <Typewriter
                 options={{
                   autoStart: true,
@@ -88,6 +94,7 @@ function SearchBar() {
               })}
         </div>
         <Carousel />
+    
       </div>
 
       <FundBox fundItem={fund} />

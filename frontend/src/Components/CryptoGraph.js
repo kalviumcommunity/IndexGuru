@@ -1,4 +1,4 @@
-// TradingViewWidget.jsx
+
 
 import React, { useEffect, useRef } from 'react';
 
@@ -30,7 +30,7 @@ export default function CryptoGraph() {
       function createWidget() {
         if (document.getElementById('tradingview_5feea') && 'TradingView' in window) {
           new window.TradingView.widget({
-            width: 1500,
+            width: 1300,
             height: 690,
             symbol: "BITSTAMP:BTCUSD",
             interval: "D",

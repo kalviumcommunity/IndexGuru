@@ -172,7 +172,11 @@ function CryptoTracker() {
                   ))}
                 </div>
               </ul>
-              <div className="pagination">
+             
+            </>
+          )}
+        </div>
+        <div className="pagination">
                 <button
                   onClick={() => paginate(currentPage - 1)}
                   disabled={currentPage === 1}
@@ -186,9 +190,6 @@ function CryptoTracker() {
                   Next
                 </button>
               </div>
-            </>
-          )}
-        </div>
         <div className="explore_div">
           <Link to={"/explorecrypto"}>
           <button className="explore_button">

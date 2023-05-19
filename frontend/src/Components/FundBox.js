@@ -76,8 +76,10 @@ export default function FundBox(props) {
       legend: {
         display: true,
         position: 'top',
+       
       
       },
+
     },
     width: 600,
     height: 800,
@@ -127,9 +129,9 @@ export default function FundBox(props) {
         ) : (
           <div className="card-div">
             <div className="fund_details_graph">
-            <h1 style={{"marginLeft": 85, "marginTop":25}}>{fundItem.name}</h1>
+            <h1 style={{"marginLeft": 20, "marginTop":25}}>{fundItem.name}</h1>
             <div className="NAV">
-              <h2 style={{"color": "#888", "fontSize": "3rem"}}>Current NAV</h2>
+              <h2 style={{"color": "#888", "fontSize": "1.5rem"}}>Current NAV</h2>
               <div> <span className="current_nav" style={{"fontWeight": 600,  "fontSize": "1.8rem"}}> ₹{fundItem.current_nav}</span> <span>{
                 fundItem.one_day_return>0? <span style={{"color": "#10b983"}}> +{fundItem.one_day_return}</span>: <span style={{"color": "red"}}>{fundItem.one_day_return}</span>
                 }</span> </div>
@@ -137,9 +139,9 @@ export default function FundBox(props) {
                </div>
 
                <div className="short_name" ><h1 style={{"color": "#888", "textAlign":"center"}}>{fundItem.short_name}</h1>
-               <div className="fund_details"> <span className="fund_stats">Category: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.category}</h2> </div>
-               <div className="fund_details"> <span className="fund_stats">Sub-Category: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.sub_category}</h2> </div>
-               <div className="fund_details"> <span className="fund_stats">Scheme Plan: </span> <h2 style={{"color": "#2196f3"}}>{fundItem.scheme_plan} </h2></div>
+               <div className="fund_details"> <span className="fund_stats">Category: </span> <h3 style={{"color": "#2196f3"}}>{fundItem.category}</h3> </div>
+               <div className="fund_details"> <span className="fund_stats">Sub-Category: </span> <h3 style={{"color": "#2196f3"}}>{fundItem.sub_category}</h3> </div>
+               <div className="fund_details"> <span className="fund_stats">Scheme Plan: </span> <h3 style={{"color": "#2196f3"}}>{fundItem.scheme_plan} </h3></div>
              
 
 
