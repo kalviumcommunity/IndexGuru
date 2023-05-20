@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Typography, Slider } from "@mui/material";
 import { Doughnut } from "react-chartjs-2";
-import "./SIPCalculator.css";
+import "./LumpSum.css";
 import { numberToWords } from "number-to-words";
 
 const LumpsumCalculator = () => {
@@ -69,19 +69,28 @@ const LumpsumCalculator = () => {
   };
 
   return (
-    <div className="main_div">
-      <div className="second_div">
-        <div className="textField">
+    <div className="main_div2">
+      <div className="second_div2">
+        <div className="textField2">
           <div>
             <TextField
               type="number"
               label="Principal Amount"
               variant="outlined"
               fullWidth
-              value={principalAmount}
-              onChange={(e) =>
-                setPrincipalAmount(parseFloat(e.target.value))
-              }
+              value={principalAmount === 0 ? "" : principalAmount}
+              onChange={(e) => setPrincipalAmount(parseFloat(e.target.value))}
+       
+                onKeyDown={(e) => {
+                  if (e.keyCode === 38) { // 38 is the key code for the upward arrow key
+                    e.preventDefault();
+                    setPrincipalAmount(prevAmount => prevAmount + 1000);
+                  } else if (e.keyCode === 40) { // 40 is the key code for the down arrow key
+                    e.preventDefault();
+                    setPrincipalAmount(prevAmount => prevAmount - 1000);
+                  }
+                }}
+
             />
             <Slider
               value={principalAmount}
@@ -98,27 +107,39 @@ const LumpsumCalculator = () => {
               label="Rate of Interest (%)"
               variant="outlined"
               fullWidth
-              value={rateOfInterest}
-              onChange={(e) =>
-                setRateOfInterest(parseFloat(e.target.value))
-              }
+              value={rateOfInterest === 0 ? "" : rateOfInterest}
+              onChange={(e) => setRateOfInterest(parseFloat(e.target.value))}
             />
             <Slider
               value={rateOfInterest}
               onChange={handleRateOfInterestChange}
-              valueLabelDisplay            />
+              valueLabelDisplay="auto"
+              min={0}
+              max={40}
+            />
+          </div>
+          <div>
+            <TextField
+              type="number"
+              label="Investment Period (in yrs)"
+              variant="outlined"
+              fullWidth
+              value={investmentPeriod === 0 ? "" : investmentPeriod}
+              onChange={(e) => setInvestmentPeriod(parseFloat(e.target.value))}
+            />
+
             <Slider
               value={investmentPeriod}
               onChange={handleInvestmentPeriodChange}
               valueLabelDisplay="auto"
               min={1}
-              max={30}
+              max={50}
               step={1}
             />
           </div>
         </div>
-        <div className="graph_div">
-          <div className="dough">
+        <div className="graph_div2">
+          <div className="dough2">
             {inputFilled ? (
               <Doughnut data={chartData} />
             ) : (
@@ -127,19 +148,25 @@ const LumpsumCalculator = () => {
               </Typography>
             )}
           </div>
-          <div className="total_return">
-            <Typography variant="h6" align="center">
+          <div className="total_return2">
+            <Typography variant="h6" align="center" style={{ color: "#888" }}>
               Total Return
             </Typography>
             {inputFilled && (
-              <Typography variant="h4" align="center">
+              <Typography
+                variant="h4"
+                align="center"
+                style={{ color: "#10b983" }}
+              >
                 {convertCurrencyToWords(futureValue).amount}
               </Typography>
             )}
             {inputFilled && (
               <Typography variant="subtitle1" align="center">
-                <div className="text_currency"> ({convertCurrencyToWords(futureValue).words})</div>
-               
+                <div className="text_currency">
+                  {" "}
+                  ({convertCurrencyToWords(futureValue).words})
+                </div>
               </Typography>
             )}
           </div>
@@ -150,4 +177,3 @@ const LumpsumCalculator = () => {
 };
 
 export default LumpsumCalculator;
-
