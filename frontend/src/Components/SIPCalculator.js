@@ -61,19 +61,51 @@ const SIPCalculator = () => {
           monthlyInvestment * investmentPeriod * 12,
           futureValue - monthlyInvestment * investmentPeriod * 12,
         ],
-        backgroundColor: ["#10b983", "#42A5F5"],
+        backgroundColor: ["#42A5F5", "#10b983"],
       },
     ],
   };
 
   const convertCurrencyToWords = (amount) => {
-    const rupees = Math.floor(amount);
-    const paise = Math.round((amount - rupees) * 100);
-    const rupeesInWords = numberToWords.toWords(rupees);
-    const paiseInWords = numberToWords.toWords(paise);
-    const currencyInWords = `${rupeesInWords} rupees and ${paiseInWords} paise`;
-    return { amount: formatCurrency(amount), words: currencyInWords };
+    const crore = 10000000;
+    const lakh = 100000;
+    const thousand = 1000;
+  
+    const croreAmount = Math.floor(amount / crore);
+    const lakhAmount = Math.floor((amount % crore) / lakh);
+    const thousandAmount = Math.floor((amount % lakh) / thousand);
+    const remainingAmount = Math.floor(amount % thousand);
+    const paiseAmount = Math.round((amount - Math.floor(amount)) * 100);
+  
+    const croreInWords = numberToWords.toWords(croreAmount);
+    const lakhInWords = numberToWords.toWords(lakhAmount);
+    const thousandInWords = numberToWords.toWords(thousandAmount);
+    const remainingInWords = numberToWords.toWords(remainingAmount);
+    const paiseInWords = numberToWords.toWords(paiseAmount);
+  
+    let currencyInWords = "";
+    if (croreAmount > 0) {
+      currencyInWords += `${croreInWords} crore, `;
+    }
+    if (lakhAmount > 0) {
+      currencyInWords += `${lakhInWords} lakh, `;
+    }
+    if (thousandAmount > 0) {
+      currencyInWords += `${thousandInWords} thousand, `;
+    }
+    if (remainingAmount > 0) {
+      currencyInWords += `${remainingInWords} rupees, `;
+    }
+    if (paiseAmount > 0) {
+      currencyInWords += `${paiseInWords} paise`;
+    }
+  
+    return {
+      amount: formatCurrency(amount),
+      words: currencyInWords.trim(),
+    };
   };
+  
 
   return (
     <div className="main_div">

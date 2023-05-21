@@ -54,19 +54,52 @@ const LumpsumCalculator = () => {
     datasets: [
       {
         data: [principalAmount, futureValue - principalAmount],
-        backgroundColor: ["#10b983", "#42A5F5"],
+        backgroundColor: ["#42A5F5", "#10b983"],
       },
     ],
   };
 
   const convertCurrencyToWords = (amount) => {
-    const rupees = Math.floor(amount);
-    const paise = Math.round((amount - rupees) * 100);
-    const rupeesInWords = numberToWords.toWords(rupees);
-    const paiseInWords = numberToWords.toWords(paise);
-    const currencyInWords = `${rupeesInWords} rupees and ${paiseInWords} paise`;
-    return { amount: formatCurrency(amount), words: currencyInWords };
+    const crore = 10000000;
+    const lakh = 100000;
+    const thousand = 1000;
+  
+    const croreAmount = Math.floor(amount / crore);
+    const lakhAmount = Math.floor((amount % crore) / lakh);
+    const thousandAmount = Math.floor((amount % lakh) / thousand);
+    const remainingAmount = Math.floor(amount % thousand);
+    const paiseAmount = Math.round((amount - Math.floor(amount)) * 100);
+  
+    const croreInWords = numberToWords.toWords(croreAmount);
+    const lakhInWords = numberToWords.toWords(lakhAmount);
+    const thousandInWords = numberToWords.toWords(thousandAmount);
+    const remainingInWords = numberToWords.toWords(remainingAmount);
+    const paiseInWords = numberToWords.toWords(paiseAmount);
+  
+    let currencyInWords = "";
+    if (croreAmount > 0) {
+      currencyInWords += `${croreInWords} crore, `;
+    }
+    if (lakhAmount > 0) {
+      currencyInWords += `${lakhInWords} lakh, `;
+    }
+    if (thousandAmount > 0) {
+      currencyInWords += `${thousandInWords} thousand, `;
+    }
+    if (remainingAmount > 0) {
+      currencyInWords += `${remainingInWords} rupees, `;
+    }
+    if (paiseAmount > 0) {
+      currencyInWords += `${paiseInWords} paise`;
+    }
+  
+    return {
+      amount: formatCurrency(amount),
+      words: currencyInWords.trim(),
+    };
   };
+  
+  
 
   return (
     <div className="main_div2">
@@ -79,19 +112,23 @@ const LumpsumCalculator = () => {
               variant="outlined"
               fullWidth
               value={principalAmount === 0 ? "" : principalAmount}
-              onChange={(e) => setPrincipalAmount(parseFloat(e.target.value))}
-       
-                onKeyDown={(e) => {
-                  if (e.keyCode === 38) { // 38 is the key code for the upward arrow key
-                    e.preventDefault();
-                    setPrincipalAmount(prevAmount => prevAmount + 1000);
-                  } else if (e.keyCode === 40) { // 40 is the key code for the down arrow key
-                    e.preventDefault();
-                    setPrincipalAmount(prevAmount => prevAmount - 1000);
-                  }
-                }}
-
+              onChange={(e) => {
+                const value = parseFloat(e.target.value);
+                setPrincipalAmount(isNaN(value) ? 0 : value);
+              }}
+              onKeyDown={(e) => {
+                if (e.keyCode === 38) {
+                  // Up arrow key
+                  e.preventDefault();
+                  setPrincipalAmount((prevAmount) => prevAmount + 1000);
+                } else if (e.keyCode === 40) {
+                  // Down arrow key
+                  e.preventDefault();
+                  setPrincipalAmount((prevAmount) => prevAmount - 1000);
+                }
+              }}
             />
+
             <Slider
               value={principalAmount}
               onChange={handlePrincipalAmountChange}
