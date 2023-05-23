@@ -53,7 +53,7 @@ export default function Navbar() {
             <button className="buttons">Lumpsun Calculator</button>
             </Link>
            
-            <button id="guide" className="buttons" onClick={handleDownload} style={{textAlign:"center"}}>Investment Guide <FaDownload/></button>
+         
 
             <LoginButton />
           </div>
