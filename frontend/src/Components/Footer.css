@@ -67,10 +67,10 @@
   align-items: center;
 }
 .fbuttons{
-  /* border: 2px solid green; */
-  width: 15vw;
+  width: 11vw;
   height: 5vh;
   background-color: transparent;
+  border: none;
 }
 .Important_Links{
   /* border: 2px solid orchid; */
