@@ -9,6 +9,7 @@ import CryptoExplore from "./Components/CryptoExplore";
 import SIPCalculator from "./Components/SIPCalculator";
 import LumpsumCalculator from "./Components/LumpSum";
 import MutualFunds from "./Components/FooterComponents/MutualFunds";
+import TypesOfFunds from "./Components/FooterComponents/TypesOfFunds";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/SIPCalculator" element={<SIPCalculator />} />
         <Route path="/LumpsumCalculator" element={<LumpsumCalculator />} />
         <Route path="/MutualFunds" element={<MutualFunds />} />
+        <Route path="/TypesOfFunds" element={<TypesOfFunds />} />
       </Routes>
       <Footer />
     </>

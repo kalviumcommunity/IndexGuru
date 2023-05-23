@@ -52,8 +52,9 @@ function Footer() {
           {" "}
           <button className="fbuttons">Mutual Funds</button>{" "}
         </Link>
-
+        <Link to={"/TypesOfFunds"}>
         <button className="fbuttons">Type of mutual funds</button>
+        </Link>
         <button className="fbuttons">How to invest in mutual funds</button>
         <button className="fbuttons">Mutual Fund Returns</button>
         <button className="fbuttons">Systematic Investment Plan</button>
