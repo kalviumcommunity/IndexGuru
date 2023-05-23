@@ -51,6 +51,10 @@ function TypesOfFunds() {
       frameborder="0"
        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     allowfullscreen></iframe>
+    <div class="credit-container">
+<p class="credit-text">
+      Powered by <a class="credit-link" href="https://www.mutualfundssahihai.com/en/what-is-a-mutual-fund">Mutual Fund Sahi Hai</a></p>
+</div>
     </div>
   </div>
 
