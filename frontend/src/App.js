@@ -11,6 +11,7 @@ import LumpsumCalculator from "./Components/LumpSum";
 import MutualFunds from "./Components/FooterComponents/MutualFunds";
 import TypesOfFunds from "./Components/FooterComponents/TypesOfFunds";
 import HowToInvest from "./Components/FooterComponents/HowToInvest";
+import MutualFundsReturns from "./Components/FooterComponents/MutualFundReturns";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/MutualFunds" element={<MutualFunds />} />
         <Route path="/TypesOfFunds" element={<TypesOfFunds />} />
         <Route path="/HowToInvest" element={<HowToInvest />} />
+        <Route path="/MutualFundsReturns" element={<MutualFundsReturns />} />
       </Routes>
       <Footer />
     </>
