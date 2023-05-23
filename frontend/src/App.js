@@ -12,6 +12,7 @@ import MutualFunds from "./Components/FooterComponents/MutualFunds";
 import TypesOfFunds from "./Components/FooterComponents/TypesOfFunds";
 import HowToInvest from "./Components/FooterComponents/HowToInvest";
 import MutualFundsReturns from "./Components/FooterComponents/MutualFundReturns";
+import InvestmentPlan from "./Components/FooterComponents/InvestmentPlan";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/TypesOfFunds" element={<TypesOfFunds />} />
         <Route path="/HowToInvest" element={<HowToInvest />} />
         <Route path="/MutualFundsReturns" element={<MutualFundsReturns />} />
+        <Route path="/InvestmentPlan" element={<InvestmentPlan />} />
       </Routes>
       <Footer />
     </>

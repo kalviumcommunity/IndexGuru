@@ -76,8 +76,11 @@ function Footer() {
         <Link to={"/MutualFundsReturns"}>
         <button className="fbuttons">Mutual Fund Returns</button>
         </Link>
+        <Link to={"/InvestmentPlan"}>
         <button className="fbuttons">Systematic Investment Plan</button>
+        </Link>
       </div>
+    
 
       
       
