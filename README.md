@@ -26,7 +26,7 @@ Index Guru offers a wide range of features to support users in their financial t
 - **3-D UI**: Super fund and engaging UI combined with 3-D elements and aspects making the user experience seameless and enjoyable.
 ![res](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/acf39b3e-d39d-4784-b771-bbddac9caabb)
 
-- **Sorting System**: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
+- **Sorting System**: Fund categorisation incoporated with sorting system for making sure the users can select the fund which fits their needs. 
 - ![categories](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/85f2cef1-29a6-417e-aeea-3439cd1eadad)
 
 
