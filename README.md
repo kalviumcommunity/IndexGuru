@@ -7,9 +7,9 @@ Welcome to the Index Guru repository! This is a comprehensive capstone project t
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Usage](#Usage)
+- [Contributing](#Contributing)
+- [License](#License)
 
 
 
