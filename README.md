@@ -44,18 +44,21 @@ To use Index Guru locally, follow these steps:
 Please note that some features may require additional API keys or external services to function correctly. Refer to the project documentation or configuration files for further instructions.
 
 
-Contributing
+## Contributing
 Contributions to the Index Guru project are welcome and encouraged! If you would like to contribute, please follow these guidelines:
 
-Fork the repository on GitHub.
-Create a new branch from the main branch.
-Make your changes and ensure they are properly tested.
-Commit your changes with descriptive commit messages.
-Push your changes to your forked repository.
-Submit a pull request to the main branch of the original repository.
+1. Fork the repository on GitHub.
+2. Create a new branch from the `main` branch.
+3. Make your changes and ensure they are properly tested.
+4. Commit your changes with descriptive commit messages.
+5. Push your changes to your forked repository.
+6. Submit a pull request to the `main` branch of the original repository.
+
 Please ensure your code follows the project's coding standards and includes appropriate documentation where necessary.
 
-License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute the code according to the terms of the license.
+
+## License
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code according to the terms of the license.
+
 
 Note: This README provides a basic template for your project. Feel free to enhance and customize it to suit your specific needs.
