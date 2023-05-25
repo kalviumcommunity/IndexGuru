@@ -1,4 +1,5 @@
-Index Guru 
+![logo4](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/dff39c87-69ae-4cd9-9777-6c98281d5908)
+
 
 Welcome to Index Guru, the ultimate platform for tracking and analyzing mutual funds. This website is designed to help investors stay on top of the latest mutual fund trends, and make informed decisions about your portfolio.
 
