@@ -43,6 +43,7 @@ Index Guru offers a wide range of features to support users in their financial t
 - ![LUMSUM2](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/90c0387d-edb6-4c2a-9c2b-6f8852180262)
 
 - **Educational Resources**: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
+![res (1)](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/967bc875-540c-48d0-b923-55067ac7ca76)
 
 
 
