@@ -22,6 +22,7 @@ Index Guru offers a wide range of features to support users in their financial t
 
 - **Real-time Data**: Access up-to-date information on mutual funds, cryptocurrencies, market caps, and more.
 - **Graphical Representations**: Visualize data through interactive graphs and charts for easy analysis.
+- 
 - **Return Calculations**: Calculate investment returns based on user-defined parameters.
 - **SIP Calculator and Return Graph**: Plan your investments using the Systematic Investment Plan calculator and visualize returns over time.
 - **LUMSUM Calculator**: Estimate returns for lump sum investments based on various factors.
