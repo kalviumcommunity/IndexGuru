@@ -50,7 +50,7 @@ export default function Navbar() {
 
             
             <Link to="/LumpsumCalculator">
-            <button className="buttons">Lumpsun Calculator</button>
+            <button className="buttons">Lumpsum Calculator</button>
             </Link>
            
          

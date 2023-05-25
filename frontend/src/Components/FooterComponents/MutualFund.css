@@ -21,7 +21,8 @@
     font-size: 16px;
   
     height: 100%;
-    text-align: center;
+    margin-left: 5em;
+    text-align: left;
     padding: 20px;
     gap: 40px;
     font-family: "Noto Serif", "Noticia Text", Georgia, "Times New Roman", serif;
