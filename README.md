@@ -23,7 +23,7 @@ Index Guru offers a wide range of features to support users in their financial t
 - **Real-time Data**: Access up-to-date information cryptocurrencies, market caps, and more.
 -- ![MutualFund](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/d1d553cc-1ece-4911-bbc5-2d6a1e830113)
 
-- **3-D UI**: Access up-to-date information cryptocurrencies, market caps, and more.
+- **3-D UI**: Super fund and engaging UI combined with 3-D elements and aspects making the user experience seameless and enjoyable.
 ![res](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/acf39b3e-d39d-4784-b771-bbddac9caabb)
 
 - **Sorting System**: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
