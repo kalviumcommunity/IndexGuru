@@ -20,13 +20,17 @@ The Index Guru project is designed to empower users with the ability to make inf
 ## Features
 Index Guru offers a wide range of features to support users in their financial tracking and analysis. Here are some key highlights:
 
-- **Real-time Data**: Access up-to-date information on mutual funds, cryptocurrencies, market caps, and more.
+- **Real-time Data**: Access up-to-date information cryptocurrencies, market caps, and more.
+![Crypto Real Time](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/f941bde6-226d-410e-9db5-4ff790d3033c)
 - **Graphical Representations**: Visualize data through interactive graphs and charts for easy analysis.
-- 
+- **UptoDate Data on Funds**: Access up-to-date information Mutual Funds, holdings, and more.
+- ![MutualFund](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/d1d553cc-1ece-4911-bbc5-2d6a1e830113)
+
 - **Return Calculations**: Calculate investment returns based on user-defined parameters.
 - **SIP Calculator and Return Graph**: Plan your investments using the Systematic Investment Plan calculator and visualize returns over time.
 - **LUMSUM Calculator**: Estimate returns for lump sum investments based on various factors.
 - **Educational Resources**: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
+
 
 
 ## Installation
