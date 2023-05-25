@@ -34,6 +34,10 @@ Index Guru offers a wide range of features to support users in their financial t
 
 ![REAL-TIME](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/cdc15c87-6277-43a6-b9ad-83d872742012)
 
+- **Live Crypto-Data and Dynamic Graph System**: Check the live ever updating data on all the Crypto Currency and visulaize it through dynamic graph system.
+- ![Crypto](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/5e4cf3c3-9874-4cee-afa2-74974b65fb32)
+
+
 - **UptoDate Data on Funds**: Access up-to-date information Mutual Funds, holdings, and more.
 ![LatestData](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/619c299c-a745-4522-a08a-a19cf821cd62)
 
