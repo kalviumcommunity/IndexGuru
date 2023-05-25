@@ -13,29 +13,36 @@ Welcome to the Index Guru repository! This is a comprehensive capstone project t
 
 
 
-Introduction
+## Introduction
 The Index Guru project is designed to empower users with the ability to make informed financial decisions by providing them with real-time data, powerful analytical tools, and educational resources. Whether you are interested in mutual funds, cryptocurrencies, or general market trends, Index Guru has you covered. Stay up to date with the latest information and explore valuable insights to enhance your investment strategies.
 
-Features
+
+## Features
 Index Guru offers a wide range of features to support users in their financial tracking and analysis. Here are some key highlights:
 
-Real-time Data: Access up-to-date information on mutual funds, cryptocurrencies, market caps, and more.
-Graphical Representations: Visualize data through interactive graphs and charts for easy analysis.
-Return Calculations: Calculate investment returns based on user-defined parameters.
-SIP Calculator and Return Graph: Plan your investments using the Systematic Investment Plan calculator and visualize returns over time.
-LUMSUM Calculator: Estimate returns for lump sum investments based on various factors.
-Educational Resources: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
-Installation
+- **Real-time Data**: Access up-to-date information on mutual funds, cryptocurrencies, market caps, and more.
+- **Graphical Representations**: Visualize data through interactive graphs and charts for easy analysis.
+- **Return Calculations**: Calculate investment returns based on user-defined parameters.
+- **SIP Calculator and Return Graph**: Plan your investments using the Systematic Investment Plan calculator and visualize returns over time.
+- **LUMSUM Calculator**: Estimate returns for lump sum investments based on various factors.
+- **Educational Resources**: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
+
+
+## Installation
 To use Index Guru locally, follow these steps:
 
-Clone the repository: git clone https://github.com/your-username/index-guru.git
-Navigate to the project directory: cd index-guru
-Install the required dependencies: npm install
-Usage
-Ensure you have the necessary dependencies installed (see Installation).
-Launch the application: npm start.
-Open your web browser and visit http://localhost:3000 to access Index Guru.
+1. Clone the repository: `git clone https://github.com/your-username/index-guru.git`
+2. Navigate to the project directory: `cd index-guru`
+3. Install the required dependencies: `npm install`
+
+
+## Usage
+1. Ensure you have the necessary dependencies installed (see [Installation](#installation)).
+2. Launch the application: `npm start`.
+3. Open your web browser and visit `http://localhost:3000` to access Index Guru.
+
 Please note that some features may require additional API keys or external services to function correctly. Refer to the project documentation or configuration files for further instructions.
+
 
 Contributing
 Contributions to the Index Guru project are welcome and encouraged! If you would like to contribute, please follow these guidelines:
