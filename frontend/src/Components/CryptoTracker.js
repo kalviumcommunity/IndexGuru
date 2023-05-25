@@ -80,6 +80,7 @@ function CryptoTracker() {
 
   const handleCryptoClick = (id) => {
     setSelectedCrypto(id);
+     window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top of the page
   };
 
   const filteredCryptoData = cryptoData.filter((item) =>
