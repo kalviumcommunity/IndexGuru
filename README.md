@@ -30,8 +30,7 @@ Index Guru offers a wide range of features to support users in their financial t
 
 - **Return Calculations**: Calculate investment returns based on user-defined parameters.
 - **SIP Calculator and Return Graph**: Plan your investments using the Systematic Investment Plan calculator and visualize returns over time.
- ![SIP_AdobeExpress (1)](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/95fc72e1-3408-417f-a7fd-6baefbd808f4)
-
+![SIP2](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/30d6f1e1-e53a-48eb-ad98-6fffba0e07ab)
 - **LUMSUM Calculator**: Estimate returns for lump sum investments based on various factors.
 - **Educational Resources**: Access a vast library of videos, articles, and research materials to expand your knowledge of the market and funds.
 
