@@ -1,4 +1,4 @@
-<p align="center"> <h1 style="font-size: 32px;"> Index Guru </h1> </p>
+<p align="center"> <h1 style="font-size: 42px;"> Index Guru </h1> </p>
 
 
 Welcome to the Index Guru repository! This is a comprehensive capstone project that aims to provide users with a powerful tool for tracking and analyzing various financial data and information. With Index Guru, users can explore and monitor data related to mutual funds, cryptocurrencies, market caps, crypto graphs, mutual fund graphs, and many other dynamic pieces of information, all in real-time. Additionally, the project includes features such as return calculations, SIP (Systematic Investment Plan) calculator and return graph, LUMSUM calculator, as well as a wide range of educational resources, including videos, articles, and research materials related to markets and funds.
