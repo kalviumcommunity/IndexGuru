@@ -21,7 +21,7 @@ The Index Guru project is designed to empower users with the ability to make inf
 Index Guru offers a wide range of features to support users in their financial tracking and analysis. Here are some key highlights:
 
 - **Real-time Data**: Access up-to-date information cryptocurrencies, market caps, and more.
-![REAL-TIME](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/cdc15c87-6277-43a6-b9ad-83d872742012)
+-- ![MutualFund](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/d1d553cc-1ece-4911-bbc5-2d6a1e830113)
 
 - *3-D UI**: Access up-to-date information cryptocurrencies, market caps, and more.
 ![res](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/acf39b3e-d39d-4784-b771-bbddac9caabb)
@@ -31,7 +31,8 @@ Index Guru offers a wide range of features to support users in their financial t
 
 
 - **Graphical Representations**: Visualize data through interactive graphs and charts for easy analysis.
--- ![MutualFund](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/d1d553cc-1ece-4911-bbc5-2d6a1e830113)
+
+![REAL-TIME](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/cdc15c87-6277-43a6-b9ad-83d872742012)
 
 - **UptoDate Data on Funds**: Access up-to-date information Mutual Funds, holdings, and more.
 ![LatestData](https://github.com/AnjaniKumar1515/IndexGuru/assets/113346374/619c299c-a745-4522-a08a-a19cf821cd62)
