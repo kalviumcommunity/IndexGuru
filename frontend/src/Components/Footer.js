@@ -54,7 +54,9 @@ function Footer() {
         <Link to={"/equity"}>
         <button className="fbuttons">Equity Mutual Funds</button>
         </Link>
+        <Link to={"/debt"}>
         <button className="fbuttons">Debt Funds</button>
+        </Link>
         <button className="fbuttons">ELSS Funds</button>
         <button className="fbuttons">Index Funds</button>
         <button id="guide" className="fbuttons" onClick={handleDownload} style={{textAlign:"center"}}>Investment Guide <FaDownload/></button>
