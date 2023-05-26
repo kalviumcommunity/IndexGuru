@@ -33,7 +33,7 @@
 
 .description{
     font-size: 16px;
-  
+    height: 120vh;
     margin-left: 5em;
     text-align: left;
     padding: 20px;
@@ -85,15 +85,13 @@
 
   /*Type of mutual funds*/
   .div2{
-
+    height: 200vh;
     margin-top: 2em;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     color: #514e4e;
-    height: 160vh;
+    border: 2px solid black;
     align-items: center;
-    
-    padding: 5px;
     background-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px);

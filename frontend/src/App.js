@@ -18,6 +18,7 @@ import Videos from "./Components/FooterComponents/Videos";
 import Equity from "./Components/FooterComponents/Equity";
 import Debt from "./Components/FooterComponents/Debt";
 import ELSS from "./Components/FooterComponents/ELSS";
+import IndexFund from "./Components/FooterComponents/IndexFund";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/equity" element={<Equity/>} />
         <Route path="/debt" element={<Debt/>} />
         <Route path="/elss" element={<ELSS/>} />
+        <Route path="/index-fund" element={<IndexFund/>} />
       </Routes>
       <Footer />
     </>
