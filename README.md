@@ -82,7 +82,7 @@ Please ensure your code follows the project's coding standards and includes appr
 
 
 ## License
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code according to the terms of the license.
+This project is licensed under the [MIT License](License). Feel free to use, modify, and distribute the code according to the terms of the license.
 
 
 Note: This README provides a basic template for your project. Feel free to enhance and customize it to suit your specific needs.
