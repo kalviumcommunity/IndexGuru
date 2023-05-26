@@ -17,6 +17,7 @@ import Questions from "./Components/FooterComponents/Questions";
 import Videos from "./Components/FooterComponents/Videos";
 import Equity from "./Components/FooterComponents/Equity";
 import Debt from "./Components/FooterComponents/Debt";
+import ELSS from "./Components/FooterComponents/ELSS";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/videos" element={<Videos/>} />
         <Route path="/equity" element={<Equity/>} />
         <Route path="/debt" element={<Debt/>} />
+        <Route path="/elss" element={<ELSS/>} />
       </Routes>
       <Footer />
     </>
