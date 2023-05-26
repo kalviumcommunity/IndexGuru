@@ -57,15 +57,16 @@
     }
   });
 
-  const deleteDataAtMidnight = new CronJob("0 0 * * *", async function() {
+  const deleteAndInsertDataAtMidnight = new CronJob("0 0 * * *", async function() {
     try {
+      // Delete existing funds
       const deletedFunds = await Fund.deleteMany();
       if (!deletedFunds) {
         console.log("No funds found");
       } else {
         console.log("All funds deleted successfully");
       }
-
+  
       // Fetch data from API and insert into database
       const response = await axios.get("https://api.kuvera.in/insight/api/v1/mutual_fund_search.json?limit=500&sort_by=one_year_return&order_by=desc&scheme_plan=GROWTH&rating=4,5&v=1.211.0");
       const funds = response.data.data;
@@ -75,8 +76,9 @@
       console.log(e);
     }
   });
-
-  deleteDataAtMidnight.start();
+  
+  deleteAndInsertDataAtMidnight.start();
+  
 
   app.listen(PORT, () => {
     console.log(`Connected to the db and Listening on PORT:${PORT}`);

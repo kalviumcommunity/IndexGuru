@@ -13,3 +13,20 @@
 
     border-radius: 10px;
 }
+.list-itemq{
+    margin-top: 1em;
+    
+    font-family: "Noto Serif", "Noticia Text", Georgia, "Times New Roman", serif;
+
+    font-size: 26px;
+    color: #514e4e;
+    margin-bottom: 10px;
+    position: relative;
+    transition: color 0.3s;
+    cursor: pointer;
+    list-style: none;
+    line-height: 20px;
+}
+.list-itemq:hover{
+    color: red;
+}
