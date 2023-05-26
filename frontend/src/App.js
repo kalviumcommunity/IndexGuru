@@ -28,13 +28,13 @@ function App() {
         <Route path="/explorecrypto" element={<CryptoExplore />} />
         <Route path="/SIPCalculator" element={<SIPCalculator />} />
         <Route path="/LumpsumCalculator" element={<LumpsumCalculator />} />
-        <Route path="/MutualFunds" element={<MutualFunds />} />
-        <Route path="/TypesOfFunds" element={<TypesOfFunds />} />
-        <Route path="/HowToInvest" element={<HowToInvest />} />
-        <Route path="/MutualFundsReturns" element={<MutualFundsReturns />} />
-        <Route path="/InvestmentPlan" element={<InvestmentPlan />} />
-        <Route path="/Questions" element={<Questions />} />
-        <Route path="/Videos" element={<Videos/>} />
+        <Route path="/mutualFunds" element={<MutualFunds />} />
+        <Route path="/typesOfFunds" element={<TypesOfFunds />} />
+        <Route path="/howToInvest" element={<HowToInvest />} />
+        <Route path="/mutualFundsReturns" element={<MutualFundsReturns />} />
+        <Route path="/investmentPlan" element={<InvestmentPlan />} />
+        <Route path="/questions" element={<Questions />} />
+        <Route path="/videos" element={<Videos/>} />
       </Routes>
       <Footer />
     </>
