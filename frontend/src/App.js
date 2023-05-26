@@ -15,6 +15,7 @@ import MutualFundsReturns from "./Components/FooterComponents/MutualFundReturns"
 import InvestmentPlan from "./Components/FooterComponents/InvestmentPlan";
 import Questions from "./Components/FooterComponents/Questions";
 import Videos from "./Components/FooterComponents/Videos";
+import Equity from "./Components/FooterComponents/Equity";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/investmentPlan" element={<InvestmentPlan />} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/videos" element={<Videos/>} />
+        <Route path="/equity" element={<Equity/>} />
       </Routes>
       <Footer />
     </>
