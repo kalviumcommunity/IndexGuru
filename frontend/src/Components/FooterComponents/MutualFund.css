@@ -3,7 +3,7 @@
     margin-top: 2em;
     display: flex;
     color: #514e4e;
-    height: 90vh;
+    height: 130vh;
     align-items: center;
     
     padding: 5px;
@@ -20,7 +20,6 @@
 .description{
     font-size: 16px;
   
-    height: 100%;
     margin-left: 5em;
     text-align: left;
     padding: 20px;

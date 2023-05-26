@@ -63,20 +63,20 @@ function Footer() {
 
       <div className="allaboutFunds">
         <h3 style={{color: "#10b983"}}>All about Mutual Funds</h3>
-        <Link to={"/MutualFunds"}>
+        <Link to={"/mutualFunds"}>
           {" "}
           <button className="fbuttons">Mutual Funds</button>{" "}
         </Link>
-        <Link to={"/TypesOfFunds"}>
+        <Link to={"/typesOfFunds"}>
         <button className="fbuttons">Type of mutual funds</button>
         </Link>
-        <Link to={"/HowToInvest"}> 
+        <Link to={"/howToInvest"}> 
         <button className="fbuttons">How to invest in mutual funds</button>
         </Link>
-        <Link to={"/MutualFundsReturns"}>
+        <Link to={"/mutualFundsReturns"}>
         <button className="fbuttons">Mutual Fund Returns</button>
         </Link>
-        <Link to={"/InvestmentPlan"}>
+        <Link to={"/investmentPlan"}>
         <button className="fbuttons">Systematic Investment Plan</button>
         </Link>
       </div>
@@ -86,12 +86,15 @@ function Footer() {
       
       <div className="Important_Links">
         <h3 style={{color: "#10b983"}}>Important Links</h3>
-        <Link to={"/Questions"}>
+        <Link to={"/questions"}>
         <button className="fbuttons">Your Questions</button>
         </Link>
-        <button className="fbuttons">Videos</button>
-        <button className="fbuttons">SIP Calculator</button>
-        <button className="fbuttons">LumpSum Calculator</button>
+        <Link to={"/videos"}><button className="fbuttons">Videos</button></Link>
+        
+        <Link to="/sipcalculator">  <button className="fbuttons">SIP Calculator</button> </Link>
+      
+        <Link to="/lumpsumCalculator"><button className="fbuttons">LumpSum Calculator</button></Link>
+        
         <button className="fbuttons">Glossary</button>
       </div>
       </div>
