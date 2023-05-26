@@ -26,8 +26,8 @@ function App() {
         <Route path="/crypto" element={<CryptoTracker />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/explorecrypto" element={<CryptoExplore />} />
-        <Route path="/SIPCalculator" element={<SIPCalculator />} />
-        <Route path="/LumpsumCalculator" element={<LumpsumCalculator />} />
+        <Route path="/sipcalculator" element={<SIPCalculator />} />
+        <Route path="/lumpsumCalculator" element={<LumpsumCalculator />} />
         <Route path="/mutualFunds" element={<MutualFunds />} />
         <Route path="/typesOfFunds" element={<TypesOfFunds />} />
         <Route path="/howToInvest" element={<HowToInvest />} />

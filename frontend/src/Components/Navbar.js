@@ -44,12 +44,12 @@ export default function Navbar() {
             <button className="buttons"> Explore Mutual Funds<FaFeatherAlt/> </button>
             </Link>
 
-            <Link to="/SIPCalculator">
+            <Link to="/sipcalculator">
             <button className="buttons">SIP Calculator </button>
             </Link>
 
             
-            <Link to="/LumpsumCalculator">
+            <Link to="/lumpsumCalculator">
             <button className="buttons">Lumpsum Calculator</button>
             </Link>
            

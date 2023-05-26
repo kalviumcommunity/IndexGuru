@@ -91,9 +91,9 @@ function Footer() {
         </Link>
         <Link to={"/videos"}><button className="fbuttons">Videos</button></Link>
         
-        <Link to="/SIPCalculator">  <button className="fbuttons">SIP Calculator</button> </Link>
+        <Link to="/sipcalculator">  <button className="fbuttons">SIP Calculator</button> </Link>
       
-        <Link to="/LumpsumCalculator"><button className="fbuttons">LumpSum Calculator</button></Link>
+        <Link to="/lumpsumCalculator"><button className="fbuttons">LumpSum Calculator</button></Link>
         
         <button className="fbuttons">Glossary</button>
       </div>
