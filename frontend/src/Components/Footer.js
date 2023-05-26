@@ -86,7 +86,9 @@ function Footer() {
       
       <div className="Important_Links">
         <h3 style={{color: "#10b983"}}>Important Links</h3>
+        <Link to={"/Questions"}>
         <button className="fbuttons">Your Questions</button>
+        </Link>
         <button className="fbuttons">Videos</button>
         <button className="fbuttons">SIP Calculator</button>
         <button className="fbuttons">LumpSum Calculator</button>
