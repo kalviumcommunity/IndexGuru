@@ -51,7 +51,9 @@ function Footer() {
       <div className="links_container">
       <div className="Important_Links">
         <h3 style={{color: "#10b983"}}>Types of Funds</h3>
+        <Link to={"/equity"}>
         <button className="fbuttons">Equity Mutual Funds</button>
+        </Link>
         <button className="fbuttons">Debt Funds</button>
         <button className="fbuttons">ELSS Funds</button>
         <button className="fbuttons">Index Funds</button>
