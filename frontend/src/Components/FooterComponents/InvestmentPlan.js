@@ -19,7 +19,7 @@ function InvestmentPlan() {
      
        
       
-        <h1 style={{textAlign:"left", marginBottom: "1em", color: "#2196f3"} }>
+        <h1 style={{textAlign:"left", color: "#2196f3"} }>
         What is Systematic Investment Plan (SIP)?
         </h1>
 

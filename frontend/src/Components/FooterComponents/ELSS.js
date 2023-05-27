@@ -26,7 +26,7 @@ function ELSS() {
 
        <div className='description' >
        
-        <h2 className='Simplifying'>
+        <h2 className='Simplifying_elss'>
         ELSS Fund – Tax Saving Mutual Fund
         </h2>
       
@@ -44,7 +44,9 @@ function ELSS() {
         <br />
         ELSS funds offer both growth and dividend options. Under the growth option, the investor's returns are accumulated over time, and they can redeem the units at the end of the lock-in period. In the dividend option, investors receive regular dividend payouts during the lock-in period.        <br />
         <br />
-
+        An individual or a Hindu Undivided Family (HUF) can claim a deduction of up to Rs. 1.5 lakhs from their total taxable income in a financial year by investing in ELSS.
+        <br/>
+        When an investor puts money into an ELSS, the invested amount is deducted from their total taxable income. This means that the investor's taxable income is reduced by the amount invested in ELSS, up to the maximum deduction limit of Rs. 1.5 lakhs.
  
 
 </div>

@@ -9,7 +9,7 @@ function TypesOfFunds() {
   return (
     <>
     
-    <div className='div2'>
+    <div className='type-div'>
 
 
 
