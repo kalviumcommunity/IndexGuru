@@ -1,6 +1,6 @@
 import React from 'react';
 import "./MutualFund.css"
-import "./InvestmentPlan.css"
+import "./Questions.css"
 
 
 function  Questions() {
@@ -10,11 +10,11 @@ function  Questions() {
   return (
     <>
     
-    <div className='div5' style={{height:"190vh"}}>
+    <div className='question_div' style={{height:"200vh"}}>
 
 
 
-       <div className='description' >
+       <div className='description_questions' >
       
      
        
@@ -23,7 +23,7 @@ function  Questions() {
         Frequently Asked Questions
         </h1>
 
-        <div class="list-container1">
+        <div class="list-containerqe">
   
     
          

@@ -26,7 +26,7 @@ function Debt() {
 
        <div className='description' >
        
-        <h2 className='Simplifying'>
+        <h2 className='Simplifying_debt'>
         What are Debt Funds?
         </h2>
       

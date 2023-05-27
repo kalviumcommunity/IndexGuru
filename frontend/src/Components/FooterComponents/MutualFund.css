@@ -28,8 +28,45 @@
   -webkit-backdrop-filter: blur(10px); 
 
 }
+.div_equity{
+  border-radius: 10px;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  color: #514e4e;
+  height: 100vh;
 
+ padding: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
 
+}
+.Simplifying_equity{
+  color: #2196f3;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 6em;
+  margin-bottom: 2em;
+
+}
+.Simplifying_debt{
+  color: #2196f3;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 6em;
+  margin-bottom: 2em;
+
+}
+.Simplifying_elss{
+  color: #2196f3;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 6em;
+  margin-bottom: 2em; 
+
+}
 
 .description{
     font-size: 16px;
@@ -84,20 +121,20 @@
 
 
   /*Type of mutual funds*/
-  .div2{
-    height: 200vh;
+  .type-div{
+    height: 185vh;
     margin-top: 2em;
     padding: 30px;
     display: flex;
-    color: #514e4e;
-    border: 2px solid black;
-    align-items: center;
+     color: #514e4e; 
+   
+   
     background-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    border-radius: 10px;
+    border-radius: 10px;  
 
 }
 
@@ -135,10 +172,7 @@
     list-style: disc;
     line-height: 20px;
   }
-.sub-list1{
-    margin-top: 1.9em;
 
-}
 
 
 
@@ -160,4 +194,22 @@
   padding: 20px;
   gap: 40px;
   font-family: "Noto Serif", "Noticia Text", Georgia, "Times New Roman", serif;
+}
+
+/*returns*/
+.return_div69{
+  margin-top: 2em;
+  display: flex;
+  color: #514e4e;
+  height: 90vh;
+  align-items: center;
+  justify-content: center ;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 10px;
+
 }

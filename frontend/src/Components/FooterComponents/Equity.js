@@ -9,7 +9,7 @@ function Equity() {
   return (
     <>
     
-    <div className='div69'>
+    <div className='div_equity'>
     <div className='iframe'>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/IeRSr6F2NOM" title="YouTube video player"
      frameborder="0" 
@@ -27,7 +27,7 @@ function Equity() {
 
        <div className='description' >
        
-        <h2 className='Simplifying'>
+        <h2 className='Simplifying_equity'>
        What are Equity Funds?
         </h2>
       
@@ -63,10 +63,6 @@ function Equity() {
 
 </div>
 
-<div className='points'>
-
-  
-</div>
 
     </>
 );
