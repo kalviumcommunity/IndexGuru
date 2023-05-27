@@ -5,7 +5,7 @@ function Videos() {
   return (
     <>
     <div className='main_div69'>
-        <h1>Our Experts Say</h1>
+        <h1 className='expertiese'>Our Experts Say</h1>
     
 
     <div className='vid_cont'>

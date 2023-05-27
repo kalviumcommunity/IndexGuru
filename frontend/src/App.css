@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
+  /* border: 2px solid black; */
 
 
 }
@@ -23,7 +24,11 @@
 .graph_div{
   width: 60vw; 
   height: 100vh; 
+  /* border: 2px solid black; */
 
+}
+.fund_details_graph{
+  /* border: 2px solid purple; */
 }
 
 
@@ -38,6 +43,7 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 8px;
+  /* border: 2px solid red; */
 }
 .current_nav{
   color: #10b983;
