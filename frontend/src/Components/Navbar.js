@@ -26,7 +26,7 @@ export default function Navbar() {
       <header className="header">
         <div className="Navbar">
           <Link to="/" className="logo_container">
-          <img className="logo" src={Logo}  alt="This is my logo" />
+          <img className="logo1" src={Logo}  alt="This is my logo" />
           </Link>
 
          
