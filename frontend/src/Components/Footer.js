@@ -4,6 +4,7 @@ import "./Footer.css";
 import { FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import docsPDF from "./assets/Investment Guide.pdf"
+import logo from "../Components/assets/logo4.jpeg"
 function Footer() {
 
 
@@ -41,6 +42,9 @@ function Footer() {
           >
             <FaInstagram />
           </a>
+        </div>
+        <div>
+          <img src={logo} alt=""  className="logo"/>
         </div>
         <div className="footer__copyright">
           <p>&copy; 2023 IndexGuru</p>
@@ -103,7 +107,7 @@ function Footer() {
       
         <Link to="/lumpsumCalculator"><button className="fbuttons">LumpSum Calculator</button></Link>
         
-        <button className="fbuttons">Glossary</button>
+      
       </div>
       </div>
     </footer>

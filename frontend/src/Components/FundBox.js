@@ -1,7 +1,6 @@
 import "../App.css";
 import { useState, useEffect } from "react";
 import Spline from '@splinetool/react-spline';
-import TradingViewWidget from "./Graph";
 import Rating from '@mui/material/Rating';
 import Chart from "chart.js/auto";
 import { registerables } from "chart.js";
@@ -33,7 +32,7 @@ export default function FundBox(props) {
   }, [fundItem]);
   
 
-  const navValues = navData.map((dataPoint) => dataPoint[1]);
+  const navValues = navData.map((dataPoint) => dataPoint[1]);       
 
   const daysToShow = 30;
   const dateLabels = Array.from({ length: daysToShow }, (_, i) => {
@@ -122,7 +121,7 @@ export default function FundBox(props) {
         {fundItem === null ? (
           <div>
            <Spline scene="https://prod.spline.design/pc5sxvD0mNs80Pb3/scene.splinecode"
-            style={{height:"800px"}}
+            style={{height:"600px"}}
             />
             
           </div>
@@ -183,9 +182,16 @@ export default function FundBox(props) {
         {/* The investments div start here  */}
     
         <div className="stats">
-          <div className="stats-heading">Had you invested</div>
+          <div className="stats-heading">Calculate your Returns for
+         <h6 className="stats-heading_sub_heading"> {fundItem === null
+                ? <span>"Selected Fund"</span>
+                : `${fundItem.short_name}`}
+                </h6>
+         
+          </div>
+          <div className="principle_main">
           <div className="priciple">
-           
+           <span>Enter your Principle Amount</span>
             <input
               className="principleAmount"
               value={input}
@@ -193,7 +199,7 @@ export default function FundBox(props) {
             />
           </div>
           <div className="button-box">
-            <div className="over"> Over the last:</div>
+            <div className="over"> Select Time Period</div>
             <div
               className="selection"
               id="button1"
@@ -216,6 +222,10 @@ export default function FundBox(props) {
               3Y
             </div>
           </div>
+         
+          </div>
+
+
         </div>
 
         <div className="returns">
