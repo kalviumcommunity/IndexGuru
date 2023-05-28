@@ -138,69 +138,93 @@
 .stats {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: 85vh;
 }
 .stats-heading {
-  font-size: 75px;
+  width: 80vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 65px;
   font-family: 'Roboto Slab', serif;  
-  color: #004e92;
+  color: #888;
   margin-top: 25px;
 }
-.priciple {
-  font-size: 55px;
-  font-family: 'Roboto Slab', serif;  
-  color: #0879dc;
+.stats-heading_sub_heading{
+font-size: xx-large;
+color: #10b983;
+
 }
+
+.priciple {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Roboto Slab', serif;  
+  color: #888;
+  height: 20vh;
+  font-size: x-large;
+}
+.principle_main{
+  padding: 20px;
+  height: 40vh;
+  display: flex ;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .over {
-  font-size: 35px;
+  font-size: x-large;
   width: 15vw;
-  color: #0879dc;
+  color: #888;
+}
+
+.button-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 16vh;
+  width: 50vw;
+  font-size: 28px;
+  font-family: 'Roboto Slab', serif;   
+  text-align: center;
 }
 
 .principleAmount{
-  width: 100%;
+
+  width: 40%;
   max-width: 400px;
   height: 50px;
-  margin-top: 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 0 16px;
   font-size: 16px;
   background-color: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
 }
 .principleAmount:focus{
   outline: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
-.button-box {
-  display: flex;
 
-  align-items: center;
-  justify-content: space-evenly;
-  height: 6vh;
-  width: 34vw;
-
-  font-size: 28px;
-  font-family: 'Roboto Slab', serif;   
-  text-align: center;
-
-}
 
 #button1, #button2{
   width: 5vw;
-  color: #0879dc;
 
-  border: none;
+
   height: 5vh;
   display: flex;
   justify-content: center;
   justify-content: center;
   flex-direction: column;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 5px;
 }
 
 .selection:hover {
@@ -215,7 +239,6 @@
 
 .heading1 {
   font-size: 50px;
-  text-shadow: -2px 4px 8px rgba(4, 254, 252, 0.82);
 }
 .returns {
   color: #0879dc;
@@ -230,8 +253,8 @@
   align-items: center;
 }
 .valueReturns{
-  color: #f60000ea;
-}
+  color: #10b983;
+}                       
 .return-box {
   display: flex;
   margin-top: 15px;
