@@ -52,7 +52,6 @@ const FundSchema = new Schema({
   },
   tags: {
     type: Array,
-    required: true,
   },
   one_day_return: {
     type: Number,

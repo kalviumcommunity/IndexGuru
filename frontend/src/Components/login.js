@@ -23,7 +23,7 @@ const LoginButton = () => {
         </button>
       )}
       {alert && (
-        <div className="logoutAlert">
+        <div>
           <div className="alert-text">
             Do you want to <span style={{ color: "red" }}>logout?</span>
           </div>
