@@ -156,15 +156,17 @@ function CryptoTracker() {
                           Price: ${item.current_price.toLocaleString()}
                         </div>
                         <div
-                          className={
-                            item.price_change_percentage_24h > 0
-                              ? "crypto-item-change positive"
-                              : "crypto-item-change negative"
-                          }
-                        >
-                          24h Change:{" "}
-                          {item.price_change_percentage_24h.toFixed(2)}%
-                        </div>
+  className={
+    item.price_change_percentage_24h && item.price_change_percentage_24h > 0
+      ? "crypto-item-change positive"
+      : "crypto-item-change negative"
+  }
+>
+  24h Change:{" "}
+  {item.price_change_percentage_24h
+    ? item.price_change_percentage_24h.toFixed(2)
+    : "N/A"}%
+</div>
                         <div className="crypto-item-market-cap">
                           Market Cap: ${item.market_cap.toLocaleString()}
                         </div>
@@ -178,19 +180,20 @@ function CryptoTracker() {
           )}
         </div>
         <div className="pagination">
-                <button
-                  onClick={() => paginate(currentPage - 1)}
-                  disabled={currentPage === 1}
-                >
-                  Previous
-                </button>
-                <button
-                  onClick={() => paginate(currentPage + 1)}
-                  disabled={indexOfLastItem >= filteredCryptoData.length}
-                >
-                  Next
-                </button>
-              </div>
+  <button
+    onClick={() => paginate(currentPage - 1)}
+    disabled={currentPage === 1}
+  >
+    Previous
+  </button>
+  <button
+    onClick={() => paginate(currentPage + 1)}
+    disabled={indexOfLastItem >= filteredCryptoData.length}
+  >
+    Next
+  </button>
+</div>
+
         <div className="explore_div">
           <Link to={"/explorecrypto"}>
           <button className="explore_button">

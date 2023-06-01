@@ -86,11 +86,10 @@
 }
 
 /*for login droupdown*/
-.logoutAlert {
+.logoutAlert1 {
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to bottom right, #434344, #000000);
-  padding: 2rem;
   z-index: 1;
   position: absolute;
   width: 30rem;
